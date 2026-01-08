@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hijri Calendar & Namaz Timings</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #0a5c36;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #1e90ff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #0d5fb8;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0a5c36;
+    margin-bottom: 15px;
+}
+
+#calendar {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.namaz-timings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.namaz-card {
+    background: #e0f7f1;
+    padding: 15px 25px;
+    border-radius: 10px;
+    flex: 1 1 120px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.namaz-card:hover {
+    transform: translateY(-5px);
+    background: #c0f0e0;
+}
+
+/* Responsive */
+@media(max-width:600px) {
+    .namaz-card {
+        flex: 1 1 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Hijri Calendar & Namaz Timings</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="ourcourses.html">Our Courses</a>
+    <a href="enroll.html">Enroll</a>
+    <a href="quran.html">Quran</a>
+    <a href="calendar.html">Calendar</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Hijri Calendar Today</h2>
+        <p id="calendar">Loading...</p>
+    </div>
+
+    <div class="card">
+        <h2>Namaz Timings</h2>
+        <div class="namaz-timings" id="namazTimings">
+            <div class="namaz-card">Fajr: --</div>
+            <div class="namaz-card">Dhuhr: --</div>
+            <div class="namaz-card">Asr: --</div>
+            <div class="namaz-card">Maghrib: --</div>
+            <div class="namaz-card">Isha: --</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Hijri Calendar
+function loadHijriCalendar() {
+    fetch('https://api.aladhan.com/v1/gToH?date=' + new Date().toISOString().slice(0,10))
+    .then(response => response.json())
+    .then(data => {
+        const hijri = data.data.hijri;
+        document.getElementById('calendar').innerText =
+            `${hijri.day} ${hijri.month.en} ${hijri.year} AH`;
+    });
+}
+
+// Namaz Timings (Dynamic)
+function loadNamazTimings() {
+    // Karachi example, latitude & longitude
+    const latitude = 24.8607;
+    const longitude = 67.0011;
+    fetch(`https://api.aladhan.com/v1/timings?latitude=${latitude}&longitude=${longitude}&method=2`)
+    .then(response => response.json())
+    .then(data => {
+        const timings = data.data.timings;
+        const cards = document.querySelectorAll('.namaz-card');
+        cards[0].innerText = `Fajr: ${timings.Fajr}`;
+        cards[1].innerText = `Dhuhr: ${timings.Dhuhr}`;
+        cards[2].innerText = `Asr: ${timings.Asr}`;
+        cards[3].innerText = `Maghrib: ${timings.Maghrib}`;
+        cards[4].innerText = `Isha: ${timings.Isha}`;
+    });
+}
+
+loadHijriCalendar();
+loadNamazTimings();
+</script>
+
+</body>
+</html>
