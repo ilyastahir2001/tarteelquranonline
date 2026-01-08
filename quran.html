@@ -1,153 +1,154 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<title>Tarteel Online Quran</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarteel Quran</title>
 <style>
-body {margin:0; font-family: 'Scheherazade', serif; line-height:1.8; background:#fdfdfd; color:#111;}
-header {background:#0a5c36; color:#fff; padding:30px 20px; text-align:center;}
-header h1 {margin:0; font-size:2.2em;}
-header p {margin:5px 0 15px 0; font-size:1.1em;}
-header .btn {background:#1e90ff; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; margin:5px;}
-header .btn:hover {background:#0d5fb8; transform:scale(1.05); transition:0.2s;}
-.container {max-width:1000px; margin:auto; padding:20px;}
-.selects {display:flex; justify-content:space-between; flex-wrap:wrap; margin-bottom:15px;}
-.selects select, .selects input {padding:8px; font-size:1em; margin:5px 0;}
-.mushaf {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-.page-controls {display:flex; justify-content:space-between; margin-top:15px;}
-.page-controls button {padding:8px 15px; font-size:1em; border:none; border-radius:5px; background:#1e90ff; color:#fff; cursor:pointer;}
-.page-controls button:hover {background:#0d5fb8;}
-.layout-toggle {margin-bottom:10px;}
-.audio-control {margin-top:10px;}
-.audio-control audio {width:100%; margin-top:5px;}
-.line {margin:5px 0; font-size:1.4em;}
-footer {background:#222; color:#fff; text-align:center; padding:15px; margin-top:20px;}
+body {margin:0; font-family: 'Scheherazade New', serif; line-height:1.8; background:#f9f9f9; color:#0a5c36;}
+header {background:#0a5c36;color:#fff;padding:20px 10px;text-align:center;}
+nav {display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin-bottom:20px;}
+nav a {color:#fff; text-decoration:none; font-weight:bold; padding:8px 15px; border-radius:5px; background:#1e90ff; transition:0.3s;}
+nav a:hover {background:#0d5fb8;}
+section {max-width:1000px; margin:auto; padding:20px;}
+.select-container {display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;}
+.select-container select, .select-container input {padding:8px 12px; font-size:16px; border-radius:5px; border:1px solid #ccc;}
+.quran-page {background:#fff; padding:20px; margin-bottom:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.quran-ayah {font-size:22px; line-height:2; text-align:right; margin:8px 0;}
+.nav-buttons {display:flex; justify-content:space-between; margin-top:20px;}
+.nav-buttons button {padding:10px 20px; font-size:16px; border:none; border-radius:5px; background:#1e90ff; color:#fff; cursor:pointer; transition:0.3s;}
+.nav-buttons button:hover {background:#0d5fb8;}
+.audio-player {text-align:center; margin-top:20px;}
+.footer {background:#222;color:#fff;text-align:center;padding:15px;}
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
 <h1>Tarteel Online Quran</h1>
-<p>Read Quran in Printed Mushaf Style with Audio</p>
-<a class="btn" href="https://wa.me/923110267879?text=Assalamualaikum%20I%20want%20to%20enroll%20for%20online%20Quran%20classes">📞 Free Trial Class</a>
+<p>Learn Quran Online with Proper Tajweed</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="courses.html">Our Courses</a>
+<a href="contact.html">Contact</a>
+<a href="quran.html" style="background:#0d5fb8;">Quran</a>
+</nav>
 </header>
 
-<div class="container">
-<div class="selects">
-  <div>
-    <label>Surah: </label>
-    <select id="surahSelect"></select>
-  </div>
-  <div>
-    <label>Juz: </label>
-    <select id="juzSelect"></select>
-  </div>
-  <div>
-    <label>Ayah #: </label>
-    <input type="number" id="ayahInput" placeholder="Enter Ayah Number">
-    <button onclick="jumpAyah()">Go</button>
-  </div>
-</div>
+<section>
+<h2 style="text-align:center;">Online Quran</h2>
 
-<div class="layout-toggle">
-  <label>Layout: </label>
-  <select id="layoutSelect" onchange="renderPage()">
-    <option value="15">15-Line Layout</option>
-    <option value="16">16-Line Layout</option>
+<div class="select-container">
+  <select id="surahSelect"></select>
+  <select id="juzSelect"></select>
+  <input type="number" id="ayahInput" placeholder="Search Ayah Number" min="1">
+  <button onclick="goToAyah()">Go</button>
+  <select id="layoutSelect">
+    <option value="15">15 Lines</option>
+    <option value="16">16 Lines</option>
   </select>
 </div>
 
-<div class="mushaf" id="mushafContainer"></div>
-
-<div class="audio-control">
-  <audio id="audioPlayer" controls></audio>
+<div id="quranContainer" class="quran-page">
+  <p>Loading Quran...</p>
 </div>
 
-<div class="page-controls">
-  <button onclick="prevPage()">Previous Page</button>
-  <button onclick="nextPage()">Next Page</button>
-</div>
+<div class="nav-buttons">
+  <button onclick="prevPage()">← Previous</button>
+  <button onclick="nextPage()">Next →</button>
 </div>
 
-<footer>
+<div class="audio-player">
+  <audio id="quranAudio" controls>
+    Your browser does not support the audio element.
+  </audio>
+</div>
+</section>
+
+<footer class="footer">
 <p>© 2026 Tarteel Online Quran | All Rights Reserved</p>
 </footer>
 
 <script>
-let quranData = null;
+// Global variables
+let quranData = [];
 let currentPage = 0;
 let linesPerPage = 15;
 
-const mushafContainer = document.getElementById('mushafContainer');
-const surahSelect = document.getElementById('surahSelect');
-const juzSelect = document.getElementById('juzSelect');
-const layoutSelect = document.getElementById('layoutSelect');
-const audioPlayer = document.getElementById('audioPlayer');
-
-async function fetchQuran() {
-  const res = await fetch('http://api.alquran.cloud/v1/quran/quran-uthmani');
+// Fetch full Quran Arabic text from API
+async function loadQuran() {
+  const res = await fetch('https://api.alquran.cloud/v1/quran/quran-uthmani');
   const data = await res.json();
   quranData = data.data.surahs;
-  populateSurahDropdown();
-  populateJuzDropdown();
+  populateSurahJuz();
   renderPage();
 }
 
-function populateSurahDropdown() {
-  surahSelect.innerHTML = '';
+// Populate Surah & Juz dropdown
+function populateSurahJuz() {
+  const surahSelect = document.getElementById('surahSelect');
   quranData.forEach(surah => {
-    const opt = document.createElement('option');
-    opt.value = surah.number;
-    opt.textContent = `${surah.number}. ${surah.englishName}`;
-    surahSelect.appendChild(opt);
+    const option = document.createElement('option');
+    option.value = surah.number;
+    option.textContent = `${surah.number}. ${surah.name}`;
+    surahSelect.appendChild(option);
   });
-  surahSelect.onchange = () => { currentPage = 0; renderPage(); };
-}
 
-function populateJuzDropdown() {
-  juzSelect.innerHTML = '';
+  const juzSelect = document.getElementById('juzSelect');
   for(let i=1; i<=30; i++){
-    const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = `Juz ${i}`;
-    juzSelect.appendChild(opt);
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = `Juz ${i}`;
+    juzSelect.appendChild(option);
   }
-  juzSelect.onchange = () => { currentPage = 0; renderPage(); };
+
+  document.getElementById('layoutSelect').addEventListener('change', function(){
+    linesPerPage = parseInt(this.value);
+    currentPage = 0;
+    renderPage();
+  });
+
+  surahSelect.addEventListener('change', function(){ currentPage = 0; renderPage(); });
+  juzSelect.addEventListener('change', function(){ currentPage = 0; renderPage(); });
 }
 
+// Render Quran page
 function renderPage() {
-  if(!quranData) return;
-  linesPerPage = parseInt(layoutSelect.value);
-  const surahNum = parseInt(surahSelect.value) || 1;
-  const surah = quranData.find(s => s.number === surahNum);
-  const ayahs = surah.ayahs;
-  const startLine = currentPage * linesPerPage;
-  const endLine = startLine + linesPerPage;
-  mushafContainer.innerHTML = '';
-  for(let i=startLine; i<endLine && i<ayahs.length; i++){
-    const div = document.createElement('div');
-    div.className = 'line';
-    div.textContent = `${ayahs[i].text} (${ayahs[i].numberInSurah})`;
-    mushafContainer.appendChild(div);
+  const container = document.getElementById('quranContainer');
+  container.innerHTML = '';
+  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
+  const surah = quranData[surahNum-1];
+  const totalAyahs = surah.ayahs.length;
+
+  const start = currentPage * linesPerPage;
+  const end = start + linesPerPage;
+  const pageAyahs = surah.ayahs.slice(start, end);
+
+  if(pageAyahs.length === 0){
+    container.innerHTML = '<p>No Ayah to display.</p>';
+    return;
   }
-  // Set audio
-  if(ayahs[startLine]){
-    audioPlayer.src = `http://api.alquran.cloud/v1/ayah/${ayahs[startLine].number}/ar.alafasy`;
-  }
+
+  pageAyahs.forEach(ayah => {
+    const p = document.createElement('p');
+    p.className = 'quran-ayah';
+    p.textContent = `${ayah.text}`;
+    container.appendChild(p);
+  });
+
+  // Update audio (first ayah of page)
+  document.getElementById('quranAudio').src = surah.ayahs[start].audio || '';
 }
 
+// Navigation
 function nextPage(){
-  const surahNum = parseInt(surahSelect.value) || 1;
-  const surah = quranData.find(s => s.number === surahNum);
-  const totalPages = Math.ceil(surah.ayahs.length / linesPerPage);
-  if(currentPage < totalPages - 1){
+  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
+  const surah = quranData[surahNum-1];
+  if((currentPage+1)*linesPerPage < surah.ayahs.length){
     currentPage++;
     renderPage();
   }
 }
-
 function prevPage(){
   if(currentPage > 0){
     currentPage--;
@@ -155,19 +156,21 @@ function prevPage(){
   }
 }
 
-function jumpAyah(){
+// Go to specific Ayah
+function goToAyah(){
   const ayahNum = parseInt(document.getElementById('ayahInput').value);
-  if(!ayahNum) return;
-  const surahNum = parseInt(surahSelect.value) || 1;
-  const surah = quranData.find(s => s.number === surahNum);
-  const index = surah.ayahs.findIndex(a => a.numberInSurah === ayahNum);
-  if(index !== -1){
-    currentPage = Math.floor(index / linesPerPage);
+  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
+  const surah = quranData[surahNum-1];
+  if(ayahNum >=1 && ayahNum <= surah.numberOfAyahs){
+    currentPage = Math.floor((ayahNum-1)/linesPerPage);
     renderPage();
+  } else {
+    alert('Invalid Ayah Number for this Surah.');
   }
 }
 
-fetchQuran();
+// Initialize
+loadQuran();
 </script>
 
 </body>
