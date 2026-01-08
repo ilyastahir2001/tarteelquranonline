@@ -4,53 +4,72 @@
 <meta charset="UTF-8">
 <title>Tarteel Online Quran</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Fonts for Arabic -->
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-}
-header {background:#0a5c36;color:#fff;padding:40px 20px;text-align:center;}
-section {padding:40px 20px;max-width:1000px;margin:auto;}
-h2 {color:#0a5c36;}
-.services div {background:#f4f4f4;margin:10px 0;padding:15px;border-left:5px solid #0a5c36;}
- .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 5px 0;
-    font-size: 16px;
-    color: #fff;
-    background-color: #0a5c36; /* Dark Green */
-    text-decoration: none;
-    border-radius: 5px;
+body {margin:0; font-family: Arial, sans-serif; line-height:1.6; background:#f7f7f7;}
+header {background:#0a5c36; color:#fff; padding:40px 20px; text-align:center;}
+header h1 {margin-bottom:10px;}
+section {padding:40px 20px; max-width:1000px; margin:auto; background:#fff; border-radius:8px; margin-bottom:30px;}
+h2 {color:#0a5c36; margin-bottom:20px; text-align:center;}
+.services div {background:#f4f4f4; margin:10px 0; padding:15px; border-left:5px solid #0a5c36;}
+.btn {
+    display:inline-block;
+    padding:12px 25px;
+    margin:5px 0;
+    font-size:16px;
+    color:#fff;
+    background-color:#1e90ff;
+    text-decoration:none;
+    border-radius:5px;
     transition: background-color 0.3s, transform 0.2s;
 }
+.btn:hover {background-color:#0d5fb8; transform: scale(1.05);}
+footer {background:#222; color:#fff; text-align:center; padding:15px;}
 
-.btn:hover {
-    background-color: #075228; /* Darker Green on hover */
-    transform: scale(1.05);
-}
-footer {background:#222;color:#fff;text-align:center;padding:15px;}
+/* About Us icons */
+.about .about-item {display:flex; align-items:flex-start; margin:15px 0;}
+.about .about-item i {color:#0a5c36; font-size:1.8em; margin-right:15px;}
+
+/* Quran Section */
+.quran-online .quran-text {font-size:1.8em; line-height:2.2em; margin-top:20px; direction:rtl; font-family:'Scheherazade', 'Amiri', Arial, sans-serif; text-align:center;}
+
+/* Dua Section */
+.daily-dua .dua-item {margin:15px 0; padding:15px; background:#f4f4f4; border-radius:5px;}
+
+/* Audio Section */
+.naat-audio audio {margin:10px 0; width:100%; outline:none;}
+
+/* Calendar / Namaz Table */
+.hijri-calendar ul, .prayer-times ul {list-style:none; padding:0;}
+.hijri-calendar li, .prayer-times li {padding:8px 0; border-bottom:1px solid #ddd;}
 </style>
 </head>
-
 <body>
 
+<!-- Header -->
 <header>
 <h1>Tarteel Online Quran</h1>
 <p>Learn Quran Online with Proper Tajweed</p>
 <a class="btn" href="https://wa.me/923110267879?text=Assalamualaikum%20I%20want%20to%20enroll%20for%20online%20Quran%20classes">📞 Free Trial Class</a>
 </header>
 
-<section>
+<!-- About Us -->
+<section class="about">
 <h2>About Us</h2>
-<p>
-Tarteel Online Quran provides one-to-one online Quran classes for kids and adults worldwide.
-We offer qualified male and female teachers with flexible timings.
-</p>
+<div class="about-item"><i class="fas fa-globe"></i><p>One-to-one online Quran classes for kids and adults worldwide.</p></div>
+<div class="about-item"><i class="fas fa-chalkboard-teacher"></i><p>Qualified male and female teachers with flexible timings.</p></div>
+<div class="about-item"><i class="fas fa-clock"></i><p>Daily & Weekend Classes available to suit your schedule.</p></div>
+<div class="about-item"><i class="fas fa-award"></i><p>All teachers are certified in Quran teaching with years of experience guiding students.</p></div>
+<div class="about-item"><i class="fas fa-bullseye"></i><p>Our mission: Make Quran learning easy, accessible, and enjoyable for everyone.</p></div>
 </section>
 
+<!-- Courses -->
 <section class="services">
 <h2>Our Courses</h2>
 <div>📖 Noorani Qaida (Basics)</div>
@@ -59,41 +78,102 @@ We offer qualified male and female teachers with flexible timings.
 <div>🤲 Islamic Duas & Namaz</div>
 </section>
 
+<!-- Quran Majeed Section (API-based for now) -->
+<section class="quran-online">
+<h2>Read Quran Majeed Online</h2>
+<p>Read Quran with proper Arabic script and Tajweed guidance:</p>
+<div id="quran-container"></div>
+</section>
+
+<!-- Enroll Now -->
 <section>
-<h2>How We Teach</h2>
+<h2>Enroll Now</h2>
+<p>Click below to chat on WhatsApp and start your online Quran class.</p>
+<a class="btn" href="https://wa.me/923110267879?text=Assalamualaikum%20I%20want%20to%20enroll%20for%20online%20Quran%20classes" target="_blank">💬 Chat on WhatsApp</a><br>
+<a class="btn" href="https://forms.gle/YeRhEJytBg3Cdrpc6" target="_blank">📖 Register for Free Trial</a><br>
+<a class="btn" href="https://forms.gle/QCR5ifnr3LnF1ZjEA" target="_blank">📝 Admission Form</a>
+</section>
+
+<!-- Testimonials -->
+<section>
+<h2>Testimonials</h2>
+<div class="daily-dua dua-item">"Best online Quran classes! Teachers are very professional and patient." – Ahmad</div>
+<div class="daily-dua dua-item">"Highly recommend Tarteel Online Quran for kids and adults!" – Fatima</div>
+<div class="daily-dua dua-item">"I learned Quran quickly with Tajweed guidance. Excellent classes." – Ali</div>
+</section>
+
+<!-- Daily Duas -->
+<section class="daily-dua">
+<h2>Daily Duas</h2>
+<div class="dua-item">
+<p><strong>Arabic:</strong> رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
+<p><strong>Transliteration:</strong> Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina ‘adhaban-nar</p>
+<p><strong>Translation:</strong> Our Lord! Give us good in this world and good in the Hereafter and save us from the punishment of the Fire.</p>
+</div>
+</section>
+
+<!-- Blog / Islamic Tips -->
+<section>
+<h2>Islamic Tips & Articles</h2>
 <ul>
-<li>One-to-One Live Classes</li>
-<li>Zoom, WhatsApp & Skype</li>
-<li>Daily & Weekend Classes</li>
-<li>Free Trial Available</li>
+<li>Benefits of learning Quran with Tajweed</li>
+<li>Importance of daily prayers</li>
+<li>How to memorize Surahs efficiently</li>
+<li>Etiquettes of reciting Quran</li>
 </ul>
 </section>
 
-<section>
-<h2>Enroll Now</h2>
-  <p>Click below to chat on WhatsApp and start your online Quran class.</p>
-  
-  <!-- WhatsApp Button -->
-  <a class="btn" href="https://wa.me/923110267879?text=Assalamualaikum%20I%20want%20to%20enroll%20for%20online%20Quran%20classes" target="_blank">💬 Chat on WhatsApp</a>
-  <br>
-
-  <!-- Free Trial Button -->
-  <a class="btn" href="https://forms.gle/YeRhEJytBg3Cdrpc6" target="_blank">📖 Register for Free Trial</a>
-  <br>
-
-  <!-- Admission Form Button -->
-  <a class="btn" href="https://forms.gle/QCR5ifnr3LnF1ZjEA" target="_blank">📝 Admission Form</a>
+<!-- Audio / Naat / Hamd -->
+<section class="naat-audio">
+<h2>Listen to Naat & Hamd</h2>
+<p>Enjoy beautiful Naats and Hamds online:</p>
+<audio controls><source src="audio/naat1.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
+<audio controls><source src="audio/hamd1.mp3" type="audio/mpeg">Your browser does not support audio.</audio>
 </section>
 
+<!-- Hijri Calendar -->
+<section class="hijri-calendar">
+<h2>Hijri Calendar & Important Dates</h2>
+<ul>
+<li>1 Muharram – Islamic New Year</li>
+<li>12 Rabi ul-Awwal – Mawlid un-Nabi</li>
+<li>1 Ramadan – Start of Ramadan</li>
+<li>1 Shawwal – Eid ul-Fitr</li>
+<li>10 Dhu al-Hijjah – Eid ul-Adha</li>
+</ul>
+</section>
+
+<!-- Namaz / Prayer Times -->
+<section class="prayer-times">
+<h2>Namaz Timings</h2>
+<ul>
+<li>Fajr – 5:15 AM</li>
+<li>Dhuhr – 12:30 PM</li>
+<li>Asr – 4:00 PM</li>
+<li>Maghrib – 6:45 PM</li>
+<li>Isha – 8:00 PM</li>
+</ul>
+</section>
+
+<!-- Footer -->
 <footer>
 <p>© 2026 Tarteel Online Quran | All Rights Reserved</p>
 </footer>
 
+<!-- Quran API Script -->
+<script>
+fetch('https://api.alquran.cloud/v1/surah/1/ar.alafasy') // Surah Al-Fatiha
+.then(response => response.json())
+.then(data => {
+  const container = document.getElementById('quran-container');
+  data.data.ayahs.forEach(ayah => {
+    const p = document.createElement('p');
+    p.textContent = ayah.text;
+    container.appendChild(p);
+  });
+})
+.catch(err => console.log('Error fetching Quran:', err));
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
