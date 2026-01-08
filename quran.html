@@ -1,218 +1,173 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Tarteel Online Quran – Premium Quran Page</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+<title>Tarteel Quran</title>
 <style>
-body {margin:0;font-family: Arial, sans-serif;background:#fdfdfd;line-height:1.6;}
-header {background:#0a5c36;color:#fff;padding:20px;text-align:center;position:sticky;top:0;z-index:100;}
-header h1{margin:0;font-size:2rem;}
-header p{margin:5px 0;font-size:1.1rem;}
-nav ul {list-style:none;padding:0;margin:10px 0;display:flex;justify-content:center;flex-wrap:wrap;}
-nav ul li {margin:0 15px;}
-nav ul li a {color:#fff;text-decoration:none;font-weight:bold;padding:8px 12px;border-radius:5px;transition:0.3s;}
-nav ul li a:hover, nav ul li a.active {background:#ffd700;color:#0a5c36;}
-#ticker {background:#0a5c36;color:#fff;padding:10px;text-align:center;overflow:hidden;white-space:nowrap;}
-#ticker span {display:inline-block;padding-right:50px;animation:scroll 25s linear infinite;}
-@keyframes scroll {0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
-.container {max-width:1000px;margin:20px auto;padding:0 15px;}
-.format-toggle{text-align:center;margin-bottom:15px;}
-button {padding:10px 15px;margin:0 5px;border:none;border-radius:5px;cursor:pointer;background:#1e90ff;color:#fff;transition:0.3s;}
-button:hover{background:#0d5fb8;}
-#quran-content{background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 15px rgba(0,0,0,0.1);font-family:'Amiri', serif;}
-.ayat {padding:8px 5px;margin:3px 0;border-left:5px solid #0a5c36;transition:0.3s;cursor:pointer;position:relative;opacity:0;}
-.ayat.show{opacity:1;transition:opacity 0.8s ease;}
-.ayat-num{color:#0a5c36;font-weight:bold;margin-left:5px;}
-.ayat button{margin-left:5px;background:#ffd700;color:#0a5c36;border:none;padding:2px 5px;border-radius:3px;cursor:pointer;transition:0.3s;}
-.ayat button:hover{transform:scale(1.1);}
-.nav-buttons{text-align:center;margin:15px 0;}
-.nav-buttons button{margin:0 10px;}
-.modal {display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
-.modal-content{background:#fff;margin:10% auto;padding:20px;border-radius:10px;max-width:500px;font-size:1rem;line-height:1.5;text-align:right;font-family:'Amiri', serif;}
-.close-btn {float:right;cursor:pointer;font-size:1.2rem;color:#0a5c36;}
-.surah-juz-select{text-align:center;margin-bottom:10px;}
-.surah-juz-select select{padding:8px 10px;margin:0 5px;border-radius:5px;border:1px solid #ccc;}
-.audio-progress{width:100%;height:5px;background:#ccc;margin-top:5px;border-radius:5px;overflow:hidden;}
-.audio-progress-bar{width:0%;height:100%;background:#1e90ff;transition:width 0.2s;}
+body {margin:0; font-family: 'Scheherazade', serif; line-height:1.8; background:#fdfdfd; color:#111;}
+header {background:#0a5c36; color:#fff; padding:30px 20px; text-align:center;}
+header h1 {margin:0; font-size:2.2em;}
+header p {margin:5px 0 15px 0; font-size:1.1em;}
+header .btn {background:#1e90ff; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none; margin:5px;}
+header .btn:hover {background:#0d5fb8; transform:scale(1.05); transition:0.2s;}
+.container {max-width:1000px; margin:auto; padding:20px;}
+.selects {display:flex; justify-content:space-between; flex-wrap:wrap; margin-bottom:15px;}
+.selects select, .selects input {padding:8px; font-size:1em; margin:5px 0;}
+.mushaf {background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.page-controls {display:flex; justify-content:space-between; margin-top:15px;}
+.page-controls button {padding:8px 15px; font-size:1em; border:none; border-radius:5px; background:#1e90ff; color:#fff; cursor:pointer;}
+.page-controls button:hover {background:#0d5fb8;}
+.layout-toggle {margin-bottom:10px;}
+.audio-control {margin-top:10px;}
+.audio-control audio {width:100%; margin-top:5px;}
+.line {margin:5px 0; font-size:1.4em;}
+footer {background:#222; color:#fff; text-align:center; padding:15px; margin-top:20px;}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
 <h1>Tarteel Online Quran</h1>
-<p>Read & Listen the Quran Online</p>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="quran.html" class="active">Quran</a></li>
-<li><a href="courses.html">Courses</a></li>
-<li><a href="duas.html">Duas/Naat</a></li>
-<li><a href="calendar.html">Namaz Calendar</a></li>
-</ul>
-</nav>
+<p>Read Quran in Printed Mushaf Style with Audio</p>
+<a class="btn" href="https://wa.me/923110267879?text=Assalamualaikum%20I%20want%20to%20enroll%20for%20online%20Quran%20classes">📞 Free Trial Class</a>
 </header>
 
-<div id="ticker">
-<span>📖 Ayat of the Day: Loading... | 🤲 Dua: Loading... | 🕋 Namaz: Loading...</span>
-</div>
-
 <div class="container">
-
-<div class="surah-juz-select">
-<select id="surahSelect" onchange="goToSurah()">
-<option value="">Select Surah</option>
-</select>
-<select id="juzSelect" onchange="goToJuz()">
-<option value="">Select Juz</option>
-</select>
+<div class="selects">
+  <div>
+    <label>Surah: </label>
+    <select id="surahSelect"></select>
+  </div>
+  <div>
+    <label>Juz: </label>
+    <select id="juzSelect"></select>
+  </div>
+  <div>
+    <label>Ayah #: </label>
+    <input type="number" id="ayahInput" placeholder="Enter Ayah Number">
+    <button onclick="jumpAyah()">Go</button>
+  </div>
 </div>
 
-<div id="progress">Page 1 / 604</div>
-
-<div class="format-toggle">
-<button onclick="setFormat(15)">15 Lines Format</button>
-<button onclick="setFormat(16)">16 Lines Format</button>
+<div class="layout-toggle">
+  <label>Layout: </label>
+  <select id="layoutSelect" onchange="renderPage()">
+    <option value="15">15-Line Layout</option>
+    <option value="16">16-Line Layout</option>
+  </select>
 </div>
 
-<div id="quran-content">
-<p>Loading Quran...</p>
+<div class="mushaf" id="mushafContainer"></div>
+
+<div class="audio-control">
+  <audio id="audioPlayer" controls></audio>
 </div>
 
-<div class="nav-buttons">
-<button onclick="prevPage()">⬅ Previous</button>
-<button onclick="nextPage()">Next ➡</button>
+<div class="page-controls">
+  <button onclick="prevPage()">Previous Page</button>
+  <button onclick="nextPage()">Next Page</button>
+</div>
 </div>
 
-</div>
-
-<div id="tafseer-modal" class="modal">
-<div class="modal-content">
-<span class="close-btn" onclick="closeModal()">×</span>
-<p id="tafseer-text"></p>
-</div>
-</div>
+<footer>
+<p>© 2026 Tarteel Online Quran | All Rights Reserved</p>
+</footer>
 
 <script>
+let quranData = null;
+let currentPage = 0;
 let linesPerPage = 15;
-let currentPage = 1;
-let quranData = [];
-let surahData = [];
-let juzMap = [];
-let audio=null;
 
-// Fetch Quran via API
-fetch('https://api.alquran.cloud/v1/quran/quran-uthmani')
-.then(res=>res.json())
-.then(data=>{
-quranData = data.data.surahs.flatMap(s=>s.ayahs);
-surahData = data.data.surahs;
-populateDropdowns();
-mapJuz();
-renderPage();
-updateTicker();
-});
+const mushafContainer = document.getElementById('mushafContainer');
+const surahSelect = document.getElementById('surahSelect');
+const juzSelect = document.getElementById('juzSelect');
+const layoutSelect = document.getElementById('layoutSelect');
+const audioPlayer = document.getElementById('audioPlayer');
 
-// Populate Surah & Juz dropdown
-function populateDropdowns(){
-let surahSelect=document.getElementById('surahSelect');
-surahData.forEach(s=>{
-let option=document.createElement('option');
-option.value=s.number;
-option.text=s.englishName;
-surahSelect.appendChild(option);
-});
-let juzSelect=document.getElementById('juzSelect');
-for(let i=1;i<=30;i++){
-let option=document.createElement('option');
-option.value=i;
-option.text='Juz '+i;
-juzSelect.appendChild(option);
-}
+async function fetchQuran() {
+  const res = await fetch('http://api.alquran.cloud/v1/quran/quran-uthmani');
+  const data = await res.json();
+  quranData = data.data.surahs;
+  populateSurahDropdown();
+  populateJuzDropdown();
+  renderPage();
 }
 
-// Map exact start ayat index for each Juz
-function mapJuz(){
-juzMap = Array(30).fill(0);
-for(let i=0;i<quranData.length;i++){
-let ayat = quranData[i];
-let juz = ayat.juz;
-if(juz && juzMap[juz-1]==0){
-juzMap[juz-1]=i;
-}
-}
-}
-
-// Navigate Surah/Juz
-function goToSurah(){
-let surahNum=document.getElementById('surahSelect').value;
-if(surahNum){ 
-let index=quranData.findIndex(a=>a.surah.number==surahNum);
-if(index>=0){currentPage=Math.floor(index/linesPerPage)+1; renderPage();}
-}
-}
-function goToJuz(){
-let juzNum=document.getElementById('juzSelect').value;
-if(juzNum){ 
-let index=juzMap[juzNum-1]||0;
-currentPage=Math.floor(index/linesPerPage)+1;
-renderPage();
-}
+function populateSurahDropdown() {
+  surahSelect.innerHTML = '';
+  quranData.forEach(surah => {
+    const opt = document.createElement('option');
+    opt.value = surah.number;
+    opt.textContent = `${surah.number}. ${surah.englishName}`;
+    surahSelect.appendChild(opt);
+  });
+  surahSelect.onchange = () => { currentPage = 0; renderPage(); };
 }
 
-// Render Quran page
-function renderPage(){
-let start=(currentPage-1)*linesPerPage;
-let end=start+linesPerPage;
-const container=document.getElementById('quran-content');
-container.innerHTML='';
-let pageAyat=quranData.slice(start,end);
-pageAyat.forEach((a,i)=>{
-let div=document.createElement('div');
-div.className='ayat';
-div.innerHTML=`<span class="ayat-num">${a.numberInSurah}</span> ${a.text} <button onclick="showTafseer(${a.number})">i</button> <button onclick="playAudio(${a.number}, this)">🔊</button><div class="audio-progress"><div class="audio-progress-bar" id="progress-${a.number}"></div></div>`;
-container.appendChild(div);
-setTimeout(()=>{div.classList.add('show')}, i*100);
-});
-updateProgress();
+function populateJuzDropdown() {
+  juzSelect.innerHTML = '';
+  for(let i=1; i<=30; i++){
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = `Juz ${i}`;
+    juzSelect.appendChild(opt);
+  }
+  juzSelect.onchange = () => { currentPage = 0; renderPage(); };
 }
 
-// Pagination
-function nextPage(){if(currentPage*linesPerPage<quranData.length){currentPage++;renderPage();}}
-function prevPage(){if(currentPage>1){currentPage--;renderPage();}}
-function setFormat(lines){linesPerPage=lines;currentPage=1;renderPage();}
-
-// Progress Tracker
-function updateProgress(){document.getElementById('progress').innerText=`Page ${currentPage} / ${Math.ceil(quranData.length/linesPerPage)}`;}
-
-// Tafseer
-function showTafseer(ayatNum){
-fetch(`https://api.alquran.cloud/v1/ayah/${ayatNum}/editions/quran-simple,en.tafsir`)
-.then(res=>res.json())
-.then(data=>{
-let taf=`${data.data[1].text}`;
-document.getElementById('tafseer-text').innerText=taf;
-document.getElementById('tafseer-modal').style.display='block';
-});
-}
-function closeModal(){document.getElementById('tafseer-modal').style.display='none';}
-
-// Audio
-function playAudio(number, btn){
-const url=`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${number}.mp3`;
-if(audio){audio.pause();}
-audio=new Audio(url);
-audio.play();
-let progressBar=document.getElementById(`progress-${number}`);
-audio.ontimeupdate=()=>{progressBar.style.width=(audio.currentTime/audio.duration*100)+'%';};
+function renderPage() {
+  if(!quranData) return;
+  linesPerPage = parseInt(layoutSelect.value);
+  const surahNum = parseInt(surahSelect.value) || 1;
+  const surah = quranData.find(s => s.number === surahNum);
+  const ayahs = surah.ayahs;
+  const startLine = currentPage * linesPerPage;
+  const endLine = startLine + linesPerPage;
+  mushafContainer.innerHTML = '';
+  for(let i=startLine; i<endLine && i<ayahs.length; i++){
+    const div = document.createElement('div');
+    div.className = 'line';
+    div.textContent = `${ayahs[i].text} (${ayahs[i].numberInSurah})`;
+    mushafContainer.appendChild(div);
+  }
+  // Set audio
+  if(ayahs[startLine]){
+    audioPlayer.src = `http://api.alquran.cloud/v1/ayah/${ayahs[startLine].number}/ar.alafasy`;
+  }
 }
 
-// Ticker Update
-function updateTicker(){
-document.getElementById('ticker').innerHTML='<span>📖 Ayat of the Day: '+quranData[0].text+' | 🤲 Dua: Rabbana آمننا | 🕋 Namaz: Fajr 5:12, Dhuhr 12:45, Asr 3:30, Maghrib 6:15, Isha 7:45</span>';
+function nextPage(){
+  const surahNum = parseInt(surahSelect.value) || 1;
+  const surah = quranData.find(s => s.number === surahNum);
+  const totalPages = Math.ceil(surah.ayahs.length / linesPerPage);
+  if(currentPage < totalPages - 1){
+    currentPage++;
+    renderPage();
+  }
 }
+
+function prevPage(){
+  if(currentPage > 0){
+    currentPage--;
+    renderPage();
+  }
+}
+
+function jumpAyah(){
+  const ayahNum = parseInt(document.getElementById('ayahInput').value);
+  if(!ayahNum) return;
+  const surahNum = parseInt(surahSelect.value) || 1;
+  const surah = quranData.find(s => s.number === surahNum);
+  const index = surah.ayahs.findIndex(a => a.numberInSurah === ayahNum);
+  if(index !== -1){
+    currentPage = Math.floor(index / linesPerPage);
+    renderPage();
+  }
+}
+
+fetchQuran();
 </script>
 
 </body>
