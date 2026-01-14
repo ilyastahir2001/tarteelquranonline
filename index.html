@@ -1,90 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tarteel Online Quran</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <!-- SEO TITLE -->
+  <title>Online Quran Classes with Tajweed | Trusted Quran Learning for Kids & Adults</title>
 
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- SEO META -->
+  <meta name="description" content="Learn Quran online with caring teachers. Tajweed, Hifz & Noorani Qaida classes for kids and adults. Flexible timings and free trial." />
+  <meta name="keywords" content="online Quran classes, learn Quran online, Quran for kids, Tajweed teacher online, Hifz Quran classes" />
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-   
+
+  
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --primary:#0b3d2e;
+      --accent:#c9a347;
+      --soft:#f5faf7;
+      --text:#1f2933;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif;color:var(--text)}
+    .container{max-width:1200px;margin:auto;padding:0 20px}
+
+    /* TOP INFO BAR */
+    .top-bar{background:#0a2f22;color:#fff;font-size:.85rem}
+    .top-bar .container{display:flex;justify-content:space-between;align-items:center;padding:8px 20px;animation:fadeDown .8s ease}
+    .top-bar a{color:#fff;text-decoration:none;margin-left:15px}
+
+    /* NAV */
+    nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:1000}
+    nav .container{display:flex;justify-content:space-between;align-items:center;height:72px}
+    .logo{font-weight:700;font-size:1.5rem;color:var(--primary)}
+    nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:#333;font-weight:500}
+    nav a:hover{color:var(--primary)}
+    .menu-toggle{display:none;font-size:1.6rem;cursor:pointer}
+
+    /* HERO SLIDER */
+    .hero{position:relative;height:90vh;overflow:hidden}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease}
+    .hero-slide.active{opacity:1}
+    .hero-overlay{position:absolute;inset:0;background:rgba(11,61,46,.72);display:flex;align-items:center;color:#fff}
+    .hero-content{max-width:600px}
+    .hero h1{font-size:3rem;margin-bottom:15px}
+    .hero p{font-size:1.05rem;margin-bottom:25px;opacity:.95}
+    .hero ul{padding:0;margin:0 0 30px;list-style:none}
+    .hero ul li{margin-bottom:8px}
+    .hero ul i{color:var(--accent);margin-right:8px}
+    .btn-primary{background:var(--accent);color:#000;padding:15px 38px;border-radius:50px;font-weight:600;text-decoration:none}
+
+    /* TRUST */
+    .trust{background:var(--soft);padding:60px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center}
+    .trust-box{background:#fff;padding:25px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .trust-box i{font-size:2rem;color:var(--primary);margin-bottom:10px}
+
+    section{padding:90px 0}
+    h2{text-align:center;font-size:2.4rem;color:var(--primary);margin-bottom:60px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+    .card{background:#fff;padding:35px 25px;border-radius:16px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.08)}
+    .card i{font-size:2.6rem;color:var(--primary);margin-bottom:20px}
+    .card a{color:var(--primary);font-weight:600;text-decoration:none}
+
+    /* TESTIMONIAL SLIDER */
+    .testimonials{background:#fff}
+    .testimonial{display:none;text-align:center;max-width:700px;margin:auto}
+    .testimonial.active{display:block}
+    .testimonial p{font-style:italic;font-size:1.05rem}
+
+    /* CTA */
+    .cta{background:var(--primary);color:#fff;text-align:center;padding:90px 20px}
+
+    footer{background:#0a2f22;color:#ccc;text-align:center;padding:40px 0;font-size:.9rem}
+
+    @media(max-width:768px){
+      nav ul{display:none;position:absolute;top:72px;left:0;width:100%;background:#fff;flex-direction:column;padding:20px}
+      nav ul.active{display:flex;animation:slideDown .4s ease}
+      .menu-toggle{display:block}
+      .hero{height:auto;padding:120px 0}
+      .hero-content{max-width:100%}
+      .hero h1{font-size:2.3rem}
+    }
+    @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+  </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
-<header class="header">
-    <div class="logo">Tarteel Online Quran</div>
-
-    <nav>
-        <ul id="menu" class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">Our Courses</a></li>
-            <li><a href="quran.html">Quran</a></li>
-            <li><a href="duas.html">Duas / Naat</a></li>
-            <li><a href="calendar.html">Namaz / Calendar</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hamburger" id="hamburger">&#9776;</div>
-</header>
-
-<!-- ===== Hero Section ===== -->
-<section class="hero parallax">
-    <h1>Learn Quran Online with Proper Tajweed</h1>
-    <p>One-to-one online classes for kids and adults worldwide</p>
-
-    <div class="hero-buttons">
-        <a href="https://wa.me/923110267879" class="btn">📞 Free Trial Class</a>
-        <a href="forms.html" class="btn secondary">📖 Register for Free Trial</a>
-    </div>
-</section>
-
-<!-- ===== News Ticker ===== -->
-<div class="ticker">
-    <div class="ticker__items">
-        <span>📖 Quran Ayat: “Indeed, with hardship comes ease.” (94:6)</span>
-        <span>🤲 Daily Dua: Rabbi zidni ilma</span>
-        <span>🕌 Namaz Today: Fajr 5:00 | Dhuhr 12:15 | Asr 3:45 | Maghrib 6:30 | Isha 8:00</span>
-    </div>
+<div class="top-bar">
+  <div class="container" style="justify-content:center;gap:25px">
+    <span><i class="fas fa-phone"></i> +1-XXX-XXX-XXXX</span>
+    <span><i class="fas fa-envelope"></i> ilyastahir2001@gmail.com</span>
+    <span>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </span>
+  </div>
 </div>
 
-<!-- ===== About Section ===== -->
-<section class="section">
-    <h2>About Us</h2>
-    <p>
-        Tarteel Online Quran provides one-to-one online Quran classes with
-        qualified teachers, flexible timings, and strong focus on Tajweed
-        and correct recitation.
-    </p>
-</section>
+<nav>
+  <div class="container">
+    <div class="logo">Premium Quran Academy</div>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#">Tutors</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="quran-reading.html">Online Quran Reading</a></li>
+      <li><a href="#" class="btn-primary">Free Trial</a></li>
+    </ul>
+  </div>
+</nav>
 
-<!-- ===== Testimonials ===== -->
-<section class="section gray">
-    <h2>What Our Students Say</h2>
-
-    <div class="testimonials">
-        <div class="testimonial">Best Quran teaching experience ever. – Ahmed R.</div>
-        <div class="testimonial">My child improved Tajweed very fast. – Sara K.</div>
-        <div class="testimonial">Professional teachers, flexible timings. – Ali M.</div>
+<section class="hero">
+  <div class="hero-slide active" style="background-image:url('https://img.freepik.com/premium-vector/luxury-green-background-with-gold-mandala_621174-5016.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('https://img.freepik.com/premium-vector/green-frame-with-mosque-middle-isra-mikraj-background_190436-274.jpg')"></div>
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="hero-content">
+        <h1>A Caring & Structured Way to Learn Quran Online</h1>
+        <p>Parents trust us because we focus on correct recitation, character building and gentle teaching methods.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> One-on-one live classes</li>
+          <li><i class="fas fa-check"></i> Child‑friendly & respectful teachers</li>
+          <li><i class="fas fa-check"></i> Regular feedback for parents</li>
+        </ul>
+        <a href="#" class="btn-primary">Start Free Trial</a>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ===== Footer ===== -->
+<section class="trust" data-animate>
+  <div class="container trust-grid">
+    <div class="trust-box"><i class="fas fa-heart"></i><strong>Parent‑Focused</strong><br>Trust & transparency</div>
+    <div class="trust-box"><i class="fas fa-user-graduate"></i><strong>Trained Teachers</strong><br>Clear teaching approach</div>
+    <div class="trust-box"><i class="fas fa-calendar"></i><strong>Flexible Schedule</strong><br>Learn at your pace</div>
+    <div class="trust-box"><i class="fas fa-lock"></i><strong>Safe Learning</strong><br>Monitored sessions</div>
+  </div>
+</section>
+
+<section id="courses" data-animate>
+  <div class="container">
+    <h2>Our Quran Courses</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-book-quran"></i><h3>Tajweed Course</h3><p>Learn correct pronunciation rules.</p><a href="#">View Details</a></div>
+      <div class="card"><i class="fas fa-child"></i><h3>Noorani Qaida</h3><p>Perfect start for kids.</p><a href="#">View Details</a></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>Hifz Program</h3><p>Memorization with revision.</p><a href="#">View Details</a></div>
+      <div class="card"><i class="fas fa-language"></i><h3>Arabic Basics</h3><p>Understand Quranic words.</p><a href="#">View Details</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" data-animate>
+  <h2>Parents & Students Feedback</h2>
+  <div class="testimonial active"><p>“Teachers are polite and very patient with children.”</p><strong>— Parent (UK)</strong></div>
+  <div class="testimonial"><p>“Step‑by‑step Tajweed made learning easy.”</p><strong>— Student (USA)</strong></div>
+  <div class="testimonial"><p>“Good communication and progress updates.”</p><strong>— Parent (Canada)</strong></div>
+</section>
+
+<section class="cta">
+  <h2 style="color:#fff">Give Your Child a Strong Quran Foundation</h2>
+  <a href="#" class="btn-primary">Book Free Trial</a>
+</section>
+
 <footer>
-    <p>© 2026 Tarteel Online Quran | All Rights Reserved</p>
+  <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;text-align:left">
+    <div>
+      <h3 style="color:#fff">Premium Quran Academy</h3>
+      <p>Online Quran learning for kids and adults with care, patience and trust.</p>
+    </div>
+    <div>
+      <h4 style="color:#fff">Quick Links</h4>
+      <p><a href="#">Home</a></p>
+      <p><a href="#courses">Courses</a></p>
+      <p><a href="quran-reading.html">Online Quran Reading</a></p>
+      <p><a href="#">Tutors</a></p>
+    </div>
+    <div>
+      <h4 style="color:#fff">Support</h4>
+      <p><a href="#">Contact Us</a></p>
+      <p><a href="#">FAQs</a></p>
+      <p><a href="#">Privacy Policy</a></p>
+      <p><a href="#">Terms & Conditions</a></p>
+    </div>
+    <div>
+      <h4 style="color:#fff">Follow Us</h4>
+      <p>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
+        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+      </p>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:40px">© 2026 Premium Quran Academy. All rights reserved.</p>
 </footer>
 
-<!-- Main JS -->
-<script src="js/main.js"></script>
+<script>
+  // scroll animations
+  const animated=document.querySelectorAll('[data-animate]');
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.style.animation='fadeUp .8s ease forwards'});
+  },{threshold:.2});
+  animated.forEach(el=>{el.style.opacity=0;observer.observe(el)});
+
+  // mobile menu
+  document.querySelector('.menu-toggle').onclick=()=>document.querySelector('nav ul').classList.toggle('active');
+  // hero slider
+  const slides=document.querySelectorAll('.hero-slide');let i=0;
+  setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},5000);
+  // testimonials
+  const t=document.querySelectorAll('.testimonial');let ti=0;
+  setInterval(()=>{t[ti].classList.remove('active');ti=(ti+1)%t.length;t[ti].classList.add('active');},6000);
+</script>
+
 </body>
 </html>
-
-
-
