@@ -1,9 +1,4 @@
 
-:root{
-      --primary:#0b3d2e;
-      --accent:#c9a347;
-      --soft:#f5faf7;
-      --text:#1f2933;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:'Poppins',sans-serif;color:var(--text)}
