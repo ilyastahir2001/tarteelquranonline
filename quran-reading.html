@@ -1,178 +1,1588 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Tarteel Online Quran</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {margin:0; font-family: 'Scheherazade New', serif; line-height:1.8; background:#f9f9f9; color:#0a5c36;}
-header {background:#0a5c36;color:#fff;padding:20px 10px;text-align:center;}
-nav {display:flex; justify-content:center; flex-wrap:wrap; gap:15px; margin-bottom:20px;}
-nav a {color:#fff; text-decoration:none; font-weight:bold; padding:8px 15px; border-radius:5px; background:#1e90ff; transition:0.3s;}
-nav a:hover {background:#0d5fb8;}
-section {max-width:1000px; margin:auto; padding:20px;}
-.select-container {display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;}
-.select-container select, .select-container input {padding:8px 12px; font-size:16px; border-radius:5px; border:1px solid #ccc;}
-.quran-page {background:#fff; padding:20px; margin-bottom:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-.quran-ayah {font-size:22px; line-height:2; text-align:right; margin:8px 0;}
-.nav-buttons {display:flex; justify-content:space-between; margin-top:20px;}
-.nav-buttons button {padding:10px 20px; font-size:16px; border:none; border-radius:5px; background:#1e90ff; color:#fff; cursor:pointer; transition:0.3s;}
-.nav-buttons button:hover {background:#0d5fb8;}
-.audio-player {text-align:center; margin-top:20px;}
-.footer {background:#222;color:#fff;text-align:center;padding:15px;}
-</style>
+<title>Quran Index</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<div class="container">
 
-<header>
-<h1>Tarteel Online Quran</h1>
-<p>Learn Quran Online with Proper Tajweed</p>
-<nav>
-<a href="index.html">Home</a>
-<a href="courses.html">Our Courses</a>
-<a href="contact.html">Contact</a>
-<a href="quran.html" style="background:#0d5fb8;">Quran</a>
-</nav>
-</header>
+<div class="header">📖 Quran Majeed – Index</div>
 
-<section>
-<h2 style="text-align:center;">Online Quran</h2>
+<!-- ================= PARA 01 ================= -->
+<div class="para">
+  <div class="para-title">PARA 1 – Alif Lam Meem (الم)</div>
 
-<div class="select-container">
-  <select id="surahSelect"></select>
-  <select id="juzSelect"></select>
-  <input type="number" id="ayahInput" placeholder="Search Ayah Number" min="1">
-  <button onclick="goToAyah()">Go</button>
-  <select id="layoutSelect">
-    <option value="15">15 Lines</option>
-    <option value="16">16 Lines</option>
-  </select>
+  <div class="surah">
+    <a href="reading/para1-fatiha-1-7.html">
+      <span class="english-inline">1. Surah Al-Fatiha</span>
+      <span class="arabic-inline">سورة الفاتحة</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para1-fatiha-1-7.html">
+      Para 1 • Surah Al-Fatiha • Ayat 1–7 • Page 01
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para1-baqarah-1-37-p03-07.html">
+      <span class="english-inline">2. Surah Al-Baqarah</span>
+      <span class="arabic-inline">سورة البقرة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para1-baqarah-1-37-p03-07.html">Para 1 • Surah Al-Baqarah • Ayat 1–37 • Page 03–07</a></div>
+  <div class="ayat"><a href="reading/para1-baqarah-38-76-p08-12.html">Para 1 • Surah Al-Baqarah • Ayat 38–76 • Page 08–12</a></div>
+  <div class="ayat"><a href="reading/para1-baqarah-77-105-p13-17.html">Para 1 • Surah Al-Baqarah • Ayat 77–105 • Page 13–17</a></div>
+  <div class="ayat"><a href="reading/para1-baqarah-106-141-p18-22.html">Para 1 • Surah Al-Baqarah • Ayat 106–141 • Page 18–22</a></div>
 </div>
 
-<div id="quranContainer" class="quran-page">
-  <p>Loading Quran...</p>
+<!-- ================= PARA 02 ================= -->
+<div class="para">
+  <div class="para-title">PARA 2 – Sayaqoolu (سَيَقُولُ)</div>
+
+  <div class="surah">
+    <a href="reading/para2-baqarah-142-177-p23-27.html">
+      <span class="english-inline">2. Surah Al-Baqarah</span>
+      <span class="arabic-inline">سورة البقرة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para2-baqarah-142-177-p23-27.html">Para 2 • Surah Al-Baqarah • Ayat 142–177 • Page 23–27</a></div>
+  <div class="ayat"><a href="reading/para2-baqarah-178-203-p28-32.html">Para 2 • Surah Al-Baqarah • Ayat 178–203 • Page 28–32</a></div>
+  <div class="ayat"><a href="reading/para2-baqarah-204-229-p33-37.html">Para 2 • Surah Al-Baqarah • Ayat 204–229 • Page 33–37</a></div>
+  <div class="ayat"><a href="reading/para2-baqarah-230-252-p38-42.html">Para 2 • Surah Al-Baqarah • Ayat 230–252 • Page 38–42</a></div>
 </div>
 
-<div class="nav-buttons">
-  <button onclick="prevPage()">← Previous</button>
-  <button onclick="nextPage()">Next →</button>
+<!-- ================= PARA 03 ================= -->
+<div class="para">
+  <div class="para-title">PARA 3 – Tilkarrusulu (تِلْكَ الرُّسُلُ)</div>
+
+  <div class="surah">
+    <a href="reading/para3-baqarah-253-274-p43-47.html">
+      <span class="english-inline">2. Surah Al-Baqarah</span>
+      <span class="arabic-inline">سورة البقرة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para3-baqarah-253-274-p43-47.html">Para 3 • Surah Al-Baqarah • Ayat 253–274 • Page 43–47</a></div>
+  <div class="ayat"><a href="reading/para3-baqarah-275-286-p48-50.html">Para 3 • Surah Al-Baqarah • Ayat 275–286 • Page 48–50</a></div>
+
+  <div class="surah">
+    <a href="reading/para3-imran-1-37-p51-55.html">
+      <span class="english-inline">3. Surah Aal-e-Imran</span>
+      <span class="arabic-inline">سورة آل عمران</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para3-imran-1-37-p51-55.html">Para 3 • Surah Aal-e-Imran • Ayat 1–37 • Page 51–55</a></div>
+  <div class="ayat"><a href="reading/para3-imran-38-77-p56-60.html">Para 3 • Surah Aal-e-Imran • Ayat 38–77 • Page 56–60</a></div>
+  <div class="ayat"><a href="reading/para3-imran-78-91-p61-62.html">Para 3 • Surah Aal-e-Imran • Ayat 78–91 • Page 61–62</a></div>
 </div>
 
-<div class="audio-player">
-  <audio id="quranAudio" controls>
-    Your browser does not support the audio element.
-  </audio>
+<!-- ================= PARA 04 ================= -->
+<div class="para">
+  <div class="para-title">PARA 4 – Lan Tanaloo (لَنْ تَنَالُوا)</div>
+
+  <div class="surah">
+    <a href="reading/para4-imran-92-132-p63-67.html">
+      <span class="english-inline">3. Surah Aal-e-Imran</span>
+      <span class="arabic-inline">سورة آل عمران</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para4-imran-92-132-p63-67.html">Para 4 • Surah Aal-e-Imran • Ayat 92–132 • Page 63–67</a></div>
+  <div class="ayat"><a href="reading/para4-imran-133-165-p68-72.html">Para 4 • Surah Aal-e-Imran • Ayat 133–165 • Page 68–72</a></div>
+  <div class="ayat"><a href="reading/para4-imran-166-200-p73-77.html">Para 4 • Surah Aal-e-Imran • Ayat 166–200 • Page 73–77</a></div>
+
+  <div class="surah">
+    <a href="reading/para4-nisa-1-23-p78-82.html">
+      <span class="english-inline">4. Surah An-Nisa</span>
+      <span class="arabic-inline">سورة النساء</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para4-nisa-1-23-p78-82.html">Para 4 • Surah An-Nisa • Ayat 1–23 • Page 78–82</a></div>
 </div>
-</section>
 
-<footer class="footer">
-<p>© 2026 Tarteel Online Quran | All Rights Reserved</p>
-</footer>
+<!-- ================= PARA 05 ================= -->
+<div class="para">
+  <div class="para-title">PARA 5 – Wal Muhsanat (وَالْمُحْصَنَاتُ)</div>
 
-<script>
-// Global variables
-let quranData = [];
-let currentPage = 0;
-let linesPerPage = 15;
+  <div class="surah">
+    <a href="reading/para5-nisa-24-54-p83-87.html">
+      <span class="english-inline">4. Surah An-Nisa</span>
+      <span class="arabic-inline">سورة النساء</span>
+    </a>
+  </div>
 
-// Fetch full Quran Arabic text from API
-async function loadQuran() {
-  const res = await fetch('https://api.alquran.cloud/v1/quran/quran-uthmani');
-  const data = await res.json();
-  quranData = data.data.surahs;
-  populateSurahJuz();
-  renderPage();
-}
+  <div class="ayat"><a href="reading/para5-nisa-24-54-p83-87.html">Para 5 • Surah An-Nisa • Ayat 24–54 • Page 83–87</a></div>
+  <div class="ayat"><a href="reading/para5-nisa-55-87-p88-92.html">Para 5 • Surah An-Nisa • Ayat 55–87 • Page 88–92</a></div>
+  <div class="ayat"><a href="reading/para5-nisa-88-113-p93-97.html">Para 5 • Surah An-Nisa • Ayat 88–113 • Page 93–97</a></div>
+  <div class="ayat"><a href="reading/para5-nisa-114-147-p98-102.html">Para 5 • Surah An-Nisa • Ayat 114–147 • Page 98–102</a></div>
+</div>
 
-// Populate Surah & Juz dropdown
-function populateSurahJuz() {
-  const surahSelect = document.getElementById('surahSelect');
-  quranData.forEach(surah => {
-    const option = document.createElement('option');
-    option.value = surah.number;
-    option.textContent = `${surah.number}. ${surah.name}`;
-    surahSelect.appendChild(option);
-  });
+<!-- ================= PARA 06 ================= -->
+<div class="para">
+  <div class="para-title">PARA 6 – La Yuhibbullah (لا يحب الله)</div>
 
-  const juzSelect = document.getElementById('juzSelect');
-  for(let i=1; i<=30; i++){
-    const option = document.createElement('option');
-    option.value = i;
-    option.textContent = `Juz ${i}`;
-    juzSelect.appendChild(option);
-  }
+  <div class="ayat"><a href="reading/para6-nisa-148-176-p103-107.html">Para 6 • Surah An-Nisa • Ayat 148–176 • Page 103–107</a></div>
 
-  document.getElementById('layoutSelect').addEventListener('change', function(){
-    linesPerPage = parseInt(this.value);
-    currentPage = 0;
-    renderPage();
-  });
+  <div class="surah">
+    <a href="reading/para6-maidah-1-23-p107-112.html">
+      <span class="english-inline">5. Surah Al-Maaidah</span>
+      <span class="arabic-inline">سورة المائدة</span>
+    </a>
+  </div>
 
-  surahSelect.addEventListener('change', function(){ currentPage = 0; renderPage(); });
-  juzSelect.addEventListener('change', function(){ currentPage = 0; renderPage(); });
-}
+  <div class="ayat"><a href="reading/para6-maidah-1-23-p107-112.html">Para 6 • Surah Al-Maaidah • Ayat 1–23 • Page 107–112</a></div>
+  <div class="ayat"><a href="reading/para6-maidah-24-50-p113-117.html">Para 6 • Surah Al-Maaidah • Ayat 24–50 • Page 113–117</a></div>
+  <div class="ayat"><a href="reading/para6-maidah-51-82-p118-122.html">Para 6 • Surah Al-Maaidah • Ayat 51–82 • Page 118–122</a></div>
+</div>
 
-// Render Quran page
-function renderPage() {
-  const container = document.getElementById('quranContainer');
-  container.innerHTML = '';
-  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
-  const surah = quranData[surahNum-1];
-  const totalAyahs = surah.ayahs.length;
+<!-- ================= PARA 07 ================= -->
+<div class="para">
+  <div class="para-title">PARA 7 – Wa Iza Samiu (وَإِذَا سَمِعُوا)</div>
 
-  const start = currentPage * linesPerPage;
-  const end = start + linesPerPage;
-  const pageAyahs = surah.ayahs.slice(start, end);
+  <div class="ayat"><a href="reading/para7-maidah-83-120-p123-128.html">Para 7 • Surah Al-Maaidah • Ayat 83–120 • Page 123–128</a></div>
 
-  if(pageAyahs.length === 0){
-    container.innerHTML = '<p>No Ayah to display.</p>';
-    return;
-  }
+  <div class="surah">
+    <a href="reading/para7-anaam-1-34-p129-132.html">
+      <span class="english-inline">6. Surah Al-An'aam</span>
+      <span class="arabic-inline">سورة الأنعام</span>
+    </a>
+  </div>
 
-  pageAyahs.forEach(ayah => {
-    const p = document.createElement('p');
-    p.className = 'quran-ayah';
-    p.textContent = `${ayah.text}`;
-    container.appendChild(p);
-  });
+  <div class="ayat"><a href="reading/para7-anaam-1-34-p129-132.html">Para 7 • Surah Al-An'aam • Ayat 1–34 • Page 129–132</a></div>
+  <div class="ayat"><a href="reading/para7-anaam-35-72-p133-137.html">Para 7 • Surah Al-An'aam • Ayat 35–72 • Page 133–137</a></div>
+  <div class="ayat"><a href="reading/para7-anaam-73-110-p138-142.html">Para 7 • Surah Al-An'aam • Ayat 73–110 • Page 138–142</a></div>
+</div>
 
-  // Update audio (first ayah of page)
-  document.getElementById('quranAudio').src = surah.ayahs[start].audio || '';
-}
+<!-- ================= PARA 08 ================= -->
+<div class="para">
+  <div class="para-title">PARA 8 – Wa Lao Annana (وَلَوْ أَنَّنَا)</div>
 
-// Navigation
-function nextPage(){
-  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
-  const surah = quranData[surahNum-1];
-  if((currentPage+1)*linesPerPage < surah.ayahs.length){
-    currentPage++;
-    renderPage();
-  }
-}
-function prevPage(){
-  if(currentPage > 0){
-    currentPage--;
-    renderPage();
-  }
-}
+  <div class="ayat"><a href="reading/para8-anaam-111-142-p143-147.html">Para 8 • Surah Al-An'aam • Ayat 111–142 • Page 143–147</a></div>
+  <div class="ayat"><a href="reading/para8-anaam-143-165-p148-151.html">Para 8 • Surah Al-An'aam • Ayat 143–165 • Page 148–151</a></div>
 
-// Go to specific Ayah
-function goToAyah(){
-  const ayahNum = parseInt(document.getElementById('ayahInput').value);
-  const surahNum = parseInt(document.getElementById('surahSelect').value) || 1;
-  const surah = quranData[surahNum-1];
-  if(ayahNum >=1 && ayahNum <= surah.numberOfAyahs){
-    currentPage = Math.floor((ayahNum-1)/linesPerPage);
-    renderPage();
-  } else {
-    alert('Invalid Ayah Number for this Surah.');
-  }
-}
+  <div class="surah">
+    <a href="reading/para8-araf-1-51-p152-157.html">
+      <span class="english-inline">7. Surah Al-A'raaf</span>
+      <span class="arabic-inline">سورة الأعراف</span>
+    </a>
+  </div>
 
-// Initialize
-loadQuran();
-</script>
+  <div class="ayat"><a href="reading/para8-araf-1-51-p152-157.html">Para 8 • Surah Al-A'raaf • Ayat 1–51 • Page 152–157</a></div>
+  <div class="ayat"><a href="reading/para8-araf-52-87-p158-162.html">Para 8 • Surah Al-A'raaf • Ayat 52–87 • Page 158–162</a></div>
+</div>
+
+<!-- ================= PARA 09 ================= -->
+<div class="para">
+  <div class="para-title">PARA 9 – Qalal Malao (قَالَ الْمَلَأُ)</div>
+
+  <div class="ayat"><a href="reading/para9-araf-88-137-p163-167.html">Para 9 • Surah Al-A'raaf • Ayat 88–137 • Page 163–167</a></div>
+  <div class="ayat"><a href="reading/para9-araf-138-163-p168-172.html">Para 9 • Surah Al-A'raaf • Ayat 138–163 • Page 168–172</a></div>
+  <div class="ayat"><a href="reading/para9-araf-164-206-p173-177.html">Para 9 • Surah Al-A'raaf • Ayat 164–206 • Page 173–177</a></div>
+
+  <div class="surah">
+    <a href="reading/para9-anfal-1-40-p178-182.html">
+      <span class="english-inline">8. Surah Al-Anfal</span>
+      <span class="arabic-inline">سورة الأنفال</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para9-anfal-1-40-p178-182.html">Para 9 • Surah Al-Anfal • Ayat 1–40 • Page 178–182</a></div>
+</div>
+
+<!-- ================= PARA 10 ================= -->
+<div class="para">
+  <div class="para-title">PARA 10 – Walamu (وَاعْلَمُوا)</div>
+
+  <div class="ayat"><a href="reading/para10-anfal-41-75-p183-187.html">Para 10 • Surah Al-Anfal • Ayat 41–75 • Page 183–187</a></div>
+
+  <div class="surah">
+    <a href="reading/para10-taubah-1-31-p188-192.html">
+      <span class="english-inline">9. Surah At-Taubah</span>
+      <span class="arabic-inline">سورة التوبة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para10-taubah-1-31-p188-192.html">Para 10 • Surah At-Taubah • Ayat 1–31 • Page 188–192</a></div>
+  <div class="ayat"><a href="reading/para10-taubah-32-61-p193-197.html">Para 10 • Surah At-Taubah • Ayat 32–61 • Page 193–197</a></div>
+  <div class="ayat"><a href="reading/para10-taubah-62-93-p198-202.html">Para 10 • Surah At-Taubah • Ayat 62–93 • Page 198–202</a></div>
+</div>
+<!-- ================= PARA 11 ================= -->
+<div class="para">
+  <div class="para-title">PARA 11 – Yatazeroon (يعتذرون)</div>
+
+  <div class="ayat"><a href="reading/para11-taubah-94-111-p203-205.html">Para 11 • Surah At-Taubah • Ayat 94–111 • Page 203–205</a></div>
+  <div class="ayat"><a href="reading/para11-taubah-112-129-p206-208.html">Para 11 • Surah At-Taubah • Ayat 112–129 • Page 206–208</a></div>
+
+  <div class="surah">
+    <a href="reading/para11-yunus-1-25-p209-212.html">
+      <span class="english-inline">10. Surah Yunus</span>
+      <span class="arabic-inline">سورة يونس</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para11-yunus-1-25-p209-212.html">Para 11 • Surah Yunus • Ayat 1–25 • Page 209–212</a></div>
+  <div class="ayat"><a href="reading/para11-yunus-26-70-p213-217.html">Para 11 • Surah Yunus • Ayat 26–70 • Page 213–217</a></div>
+  <div class="ayat"><a href="reading/para11-yunus-71-109-p218-222.html">Para 11 • Surah Yunus • Ayat 71–109 • Page 218–222</a></div>
+</div>
+
+<!-- ================= PARA 12 ================= -->
+<div class="para">
+  <div class="para-title">PARA 12 – Wama Min Da'aba (وَمَا مِنْ دَابَّةٍ)</div>
+
+  <div class="surah">
+    <a href="reading/para12-hood-1-37-p222-227.html">
+      <span class="english-inline">11. Surah Hood</span>
+      <span class="arabic-inline">سورة هود</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para12-hood-1-37-p222-227.html">Para 12 • Surah Hood • Ayat 1–37 • Page 222–227</a></div>
+  <div class="ayat"><a href="reading/para12-hood-38-62-p227-229.html">Para 12 • Surah Hood • Ayat 38–62 • Page 227–229</a></div>
+  <div class="ayat"><a href="reading/para12-hood-63-88-p230-232.html">Para 12 • Surah Hood • Ayat 63–88 • Page 230–232</a></div>
+  <div class="ayat"><a href="reading/para12-hood-89-123-p233-236.html">Para 12 • Surah Hood • Ayat 89–123 • Page 233–236</a></div>
+
+  <div class="surah">
+    <a href="reading/para12-yusuf-1-30-p236-239.html">
+      <span class="english-inline">12. Surah Yusuf</span>
+      <span class="arabic-inline">سورة يوسف</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para12-yusuf-1-30-p236-239.html">Para 12 • Surah Yusuf • Ayat 1–30 • Page 236–239</a></div>
+  <div class="ayat"><a href="reading/para12-yusuf-31-52-p240-242.html">Para 12 • Surah Yusuf • Ayat 31–52 • Page 240–242</a></div>
+</div>
+
+<!-- ================= PARA 13 ================= -->
+<div class="para">
+  <div class="para-title">PARA 13 – Wama Ubarioo (وَمَا أُبَرِّئُ)</div>
+
+  <div class="ayat"><a href="reading/para13-yusuf-53-86-p243-246.html">Para 13 • Surah Yusuf • Ayat 53–86 • Page 243–246</a></div>
+  <div class="ayat"><a href="reading/para13-yusuf-87-111-p247-249.html">Para 13 • Surah Yusuf • Ayat 87–111 • Page 247–249</a></div>
+
+  <div class="surah">
+    <a href="reading/para13-raad-1-17-p250-252.html">
+      <span class="english-inline">13. Surah Al-Raad</span>
+      <span class="arabic-inline">سورة الرعد</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para13-raad-1-17-p250-252.html">Para 13 • Surah Al-Raad • Ayat 1–17 • Page 250–252</a></div>
+  <div class="ayat"><a href="reading/para13-raad-18-43-p253-256.html">Para 13 • Surah Al-Raad • Ayat 18–43 • Page 253–256</a></div>
+
+  <div class="surah">
+    <a href="reading/para13-ibrahim-1-26-p256-259.html">
+      <span class="english-inline">14. Surah Ibrahim</span>
+      <span class="arabic-inline">سورة إبراهيم</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para13-ibrahim-1-26-p256-259.html">Para 13 • Surah Ibrahim • Ayat 1–26 • Page 256–259</a></div>
+  <div class="ayat"><a href="reading/para13-ibrahim-27-52-p260-262.html">Para 13 • Surah Ibrahim • Ayat 27–52 • Page 260–262</a></div>
+</div>
+
+<!-- ================= PARA 14 ================= -->
+<div class="para">
+  <div class="para-title">PARA 14 – Rubama (رُبَّمَا يَوَدُّ)</div>
+
+  <div class="surah">
+    <a href="reading/para14-hijr-1-52-p262-265.html">
+      <span class="english-inline">15. Surah Al-Hijr</span>
+      <span class="arabic-inline">سورة الحجر</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para14-hijr-1-52-p262-265.html">Para 14 • Surah Al-Hijr • Ayat 1–52 • Page 262–265</a></div>
+  <div class="ayat"><a href="reading/para14-hijr-53-99-p266-268.html">Para 14 • Surah Al-Hijr • Ayat 53–99 • Page 266–268</a></div>
+
+  <div class="surah">
+    <a href="reading/para14-nahl-1-42-p268-272.html">
+      <span class="english-inline">16. Surah An-Nahl</span>
+      <span class="arabic-inline">سورة النحل</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para14-nahl-1-42-p268-272.html">Para 14 • Surah An-Nahl • Ayat 1–42 • Page 268–272</a></div>
+  <div class="ayat"><a href="reading/para14-nahl-43-87-p273-277.html">Para 14 • Surah An-Nahl • Ayat 43–87 • Page 273–277</a></div>
+  <div class="ayat"><a href="reading/para14-nahl-88-128-p278-282.html">Para 14 • Surah An-Nahl • Ayat 88–128 • Page 278–282</a></div>
+</div>
+
+<!-- ================= PARA 15 ================= -->
+<div class="para">
+  <div class="para-title">PARA 15 – Subhanallazi (سُبْحَانَ الَّذِي)</div>
+
+  <div class="surah">
+    <a href="reading/para15-baniisrail-1-40-p283-286.html">
+      <span class="english-inline">17. Surah Bani Israil</span>
+      <span class="arabic-inline">سورة بني إسرائيل</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para15-baniisrail-1-40-p283-286.html">Para 15 • Surah Bani Israil • Ayat 1–40 • Page 283–286</a></div>
+  <div class="ayat"><a href="reading/para15-baniisrail-41-80-p287-290.html">Para 15 • Surah Bani Israil • Ayat 41–80 • Page 287–290</a></div>
+  <div class="ayat"><a href="reading/para15-baniisrail-81-111-p291-293.html">Para 15 • Surah Bani Israil • Ayat 81–111 • Page 291–293</a></div>
+
+  <div class="surah">
+    <a href="reading/para15-kahf-1-22-p294-296.html">
+      <span class="english-inline">18. Surah Al-Kahf</span>
+      <span class="arabic-inline">سورة الكهف</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para15-kahf-1-22-p294-296.html">Para 15 • Surah Al-Kahf • Ayat 1–22 • Page 294–296</a></div>
+  <div class="ayat"><a href="reading/para15-kahf-23-47-p297-299.html">Para 15 • Surah Al-Kahf • Ayat 23–47 • Page 297–299</a></div>
+  <div class="ayat"><a href="reading/para15-kahf-48-74-p300-302.html">Para 15 • Surah Al-Kahf • Ayat 48–74 • Page 300–302</a></div>
+</div>
+
+<!-- ================= PARA 16 ================= -->
+<div class="para">
+  <div class="para-title">PARA 16 – Qala Alam (قَالَ أَلَمْ)</div>
+
+  <div class="ayat"><a href="reading/para16-kahf-75-110-p303-306.html">Para 16 • Surah Al-Kahf • Ayat 75–110 • Page 303–306</a></div>
+
+  <div class="surah">
+    <a href="reading/para16-maryam-1-51-p306-309.html">
+      <span class="english-inline">19. Surah Maryam</span>
+      <span class="arabic-inline">سورة مريم</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para16-maryam-1-51-p306-309.html">Para 16 • Surah Maryam • Ayat 1–51 • Page 306–309</a></div>
+  <div class="ayat"><a href="reading/para16-maryam-52-98-p310-313.html">Para 16 • Surah Maryam • Ayat 52–98 • Page 310–313</a></div>
+
+  <div class="surah">
+    <a href="reading/para16-taha-1-51-p313-315.html">
+      <span class="english-inline">20. Surah Taha</span>
+      <span class="arabic-inline">سورة طه</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para16-taha-1-51-p313-315.html">Para 16 • Surah Taha • Ayat 1–51 • Page 313–315</a></div>
+  <div class="ayat"><a href="reading/para16-taha-52-86-p316-318.html">Para 16 • Surah Taha • Ayat 52–86 • Page 316–318</a></div>
+  <div class="ayat"><a href="reading/para16-taha-87-135-p319-322.html">Para 16 • Surah Taha • Ayat 87–135 • Page 319–322</a></div>
+</div>
+
+
+<!-- ================= PARA 17 ================= -->
+<div class="para">
+  <div class="para-title">PARA 17 – Iqtaraba (اقْتَرَبَ)</div>
+  
+  <div class="surah">
+    <a href="reading/para17-anbiya-1-35-p323-325.html">
+      <span class="english-inline">21. Surah Al-Anbiya</span>
+      <span class="arabic-inline">سورة الأنبياء</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-anbiya-1-35-p323-325.html">
+      Para 17 • Surah Al-Anbiya • Ayat 1–35 • Page 323–325
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-anbiya-36-72-p326-328.html">
+      Para 17 • Surah Al-Anbiya • Ayat 36–72 • Page 326–328
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-anbiya-73-112-p329-332.html">
+      Para 17 • Surah Al-Anbiya • Ayat 73–112 • Page 329–332
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para17-haj-1-23-p332-335.html">
+      <span class="english-inline">22. Surah Al-Haj</span>
+      <span class="arabic-inline">سورة الحج</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-haj-1-23-p332-335.html">
+      Para 17 • Surah Al-Haj • Ayat 1–23 • Page 332–335
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-haj-24-55-p336-339.html">
+      Para 17 • Surah Al-Haj • Ayat 24–55 • Page 336–339
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para17-haj-56-78-p340-342.html">
+      Para 17 • Surah Al-Haj • Ayat 56–78 • Page 340–342
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<!-- ================= PARA 18 ================= -->
+<div class="para">
+  <div class="para-title">PARA 18 – Qadd Aflaha (قَدْ أَفْلَحَ)</div>
+  
+  <div class="surah">
+    <a href="reading/para18-muminun-1-58-p343-346.html">
+      <span class="english-inline">23. Surah Al-Mu'minun</span>
+      <span class="arabic-inline">سورة المؤمنون</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-muminun-1-58-p343-346.html">
+      Para 18 • Surah Al-Mu'minun • Ayat 1–58 • Page 343–346
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-muminun-59-118-p347-350.html">
+      Para 18 • Surah Al-Mu'minun • Ayat 59–118 • Page 347–350
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para18-nur-1-26-p351-353.html">
+      <span class="english-inline">24. Surah An-Nur</span>
+      <span class="arabic-inline">سورة النور</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-nur-1-26-p351-353.html">
+      Para 18 • Surah An-Nur • Ayat 1–26 • Page 351–353
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-nur-27-43-p354-356.html">
+      Para 18 • Surah An-Nur • Ayat 27–43 • Page 354–356
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-nur-44-64-p357-360.html">
+      Para 18 • Surah An-Nur • Ayat 44–64 • Page 357–360
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para18-furqan-1-20-p360-362.html">
+      <span class="english-inline">25. Surah Al-Furqan</span>
+      <span class="arabic-inline">سورة الفرقان</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para18-furqan-1-20-p360-362.html">
+      Para 18 • Surah Al-Furqan • Ayat 1–20 • Page 360–362
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- ================= PARA 19 ================= -->
+<div class="para">
+  <div class="para-title">PARA 19 – Wa Qalallazina (وَقَالَ الَّذِينَ)</div>
+  
+  <div class="surah">
+    <a href="reading/para19-furqan-21-77-p363-367.html">
+      <span class="english-inline">25. Surah Al-Furqan</span>
+      <span class="arabic-inline">سورة الفرقان</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-furqan-21-77-p363-367.html">
+      Para 19 • Surah Al-Furqan • Ayat 21–77 • Page 363–367
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para19-shuara-1-43-p367-369.html">
+      <span class="english-inline">26. Surah Ash-Shu'ara</span>
+      <span class="arabic-inline">سورة الشعراء</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-shuara-1-43-p367-369.html">
+      Para 19 • Surah Ash-Shu'ara • Ayat 1–43 • Page 367–369
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-shuara-44-117-p370-372.html">
+      Para 19 • Surah Ash-Shu'ara • Ayat 44–117 • Page 370–372
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-shuara-118-227-p373-377.html">
+      Para 19 • Surah Ash-Shu'ara • Ayat 118–227 • Page 373–377
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para19-naml-1-39-p377-380.html">
+      <span class="english-inline">27. Surah An-Naml</span>
+      <span class="arabic-inline">سورة النمل</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-naml-1-39-p377-380.html">
+      Para 19 • Surah An-Naml • Ayat 1–39 • Page 377–380
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para19-naml-40-59-p381-382.html">
+      Para 19 • Surah An-Naml • Ayat 40–59 • Page 381–382
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<!-- ================= PARA 20 ================= -->
+<div class="para">
+  <div class="para-title">PARA 20 – Amman Khalaqa (أَمَّنْ خَلَقَ)</div>
+  
+  <div class="surah">
+    <a href="reading/para20-naml-60-93-p383-386.html">
+      <span class="english-inline">27. Surah An-Naml</span>
+      <span class="arabic-inline">سورة النمل</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-naml-60-93-p383-386.html">
+      Para 20 • Surah An-Naml • Ayat 60–93 • Page 383–386
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para20-qasas-1-28-p386-389.html">
+      <span class="english-inline">28. Surah Al-Qasas</span>
+      <span class="arabic-inline">سورة القصص</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-qasas-1-28-p386-389.html">
+      Para 20 • Surah Al-Qasas • Ayat 1–28 • Page 386–389
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-qasas-29-59-p390-393.html">
+      Para 20 • Surah Al-Qasas • Ayat 29–59 • Page 390–393
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-qasas-60-88-p394-397.html">
+      Para 20 • Surah Al-Qasas • Ayat 60–88 • Page 394–397
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para20-ankabut-1-21-p397-399.html">
+      <span class="english-inline">29. Surah Al-'Ankabut</span>
+      <span class="arabic-inline">سورة العنكبوت</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-ankabut-1-21-p397-399.html">
+      Para 20 • Surah Al-Ankabut • Ayat 1–21 • Page 397–399
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para20-ankabut-22-44-p400-402.html">
+      Para 20 • Surah Al-Ankabut • Ayat 22–44 • Page 400–402
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= PARA 21 ================= -->
+<div class="para">
+  <div class="para-title">PARA 21 – Utlu Ma Oohia (أَتْلُ مَا أُوحِيَ)</div>
+
+  <div class="ayat"><a href="reading/para21-ankabut-45-69-p403-405.html">Para 21 • Surah Al-Ankabut • Ayat 45–69 • Page 403–405</a></div>
+
+  <div class="surah">
+    <a href="reading/para21-room-1-32-p405-408.html">
+      <span class="english-inline">30. Surah Ar-Room</span>
+      <span class="arabic-inline">سورة الروم</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para21-room-1-32-p405-408.html">Para 21 • Surah Ar-Room • Ayat 1–32 • Page 405–408</a></div>
+  <div class="ayat"><a href="reading/para21-room-33-60-p409-412.html">Para 21 • Surah Ar-Room • Ayat 33–60 • Page 409–412</a></div>
+
+  <div class="surah">
+    <a href="reading/para21-luqman-1-34-p412-415.html">
+      <span class="english-inline">31. Surah Luqman</span>
+      <span class="arabic-inline">سورة لقمان</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para21-luqman-1-34-p412-415.html">Para 21 • Surah Luqman • Ayat 1–34 • Page 412–415</a></div>
+
+  <div class="surah">
+    <a href="reading/para21-sajdah-1-30-p416-418.html">
+      <span class="english-inline">32. Surah As-Sajdah</span>
+      <span class="arabic-inline">سورة السجدة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para21-sajdah-1-30-p416-418.html">Para 21 • Surah As-Sajdah • Ayat 1–30 • Page 416–418</a></div>
+
+  <div class="surah">
+    <a href="reading/para21-ahzab-1-30-p419-422.html">
+      <span class="english-inline">33. Surah Al-Ahzab</span>
+      <span class="arabic-inline">سورة الأحزاب</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para21-ahzab-1-30-p419-422.html">Para 21 • Surah Al-Ahzab • Ayat 1–30 • Page 419–422</a></div>
+</div>
+
+<!-- ================= PARA 22 ================= -->
+<div class="para">
+  <div class="para-title">PARA 22 – Wa Manyaqnut (وَمَن يَقْنُتْ)</div>
+
+  <div class="ayat"><a href="reading/para22-ahzab-31-50-p423-425.html">Para 22 • Surah Al-Ahzab • Ayat 31–50 • Page 423–425</a></div>
+  <div class="ayat"><a href="reading/para22-ahzab-51-73-p426-428.html">Para 22 • Surah Al-Ahzab • Ayat 51–73 • Page 426–428</a></div>
+
+  <div class="surah">
+    <a href="reading/para22-saba-1-22-p429-431.html">
+      <span class="english-inline">34. Surah Saba</span>
+      <span class="arabic-inline">سورة سبأ</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para22-saba-1-22-p429-431.html">Para 22 • Surah Saba • Ayat 1–22 • Page 429–431</a></div>
+  <div class="ayat"><a href="reading/para22-saba-23-54-p432-435.html">Para 22 • Surah Saba • Ayat 23–54 • Page 432–435</a></div>
+
+  <div class="surah">
+    <a href="reading/para22-fatir-1-29-p435-438.html">
+      <span class="english-inline">35. Surah Fatir</span>
+      <span class="arabic-inline">سورة فاطر</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para22-fatir-1-29-p435-438.html">Para 22 • Surah Fatir • Ayat 1–29 • Page 435–438</a></div>
+  <div class="ayat"><a href="reading/para22-fatir-30-45-p439-441.html">Para 22 • Surah Fatir • Ayat 30–45 • Page 439–441</a></div>
+
+  <div class="surah">
+    <a href="reading/para22-yasin-1-21-p441-442.html">
+      <span class="english-inline">36. Surah Yasin</span>
+      <span class="arabic-inline">سورة يس</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para22-yasin-1-21-p441-442.html">Para 22 • Surah Yasin • Ayat 1–21 • Page 441–442</a></div>
+</div>
+
+<!-- ================= PARA 23 ================= -->
+<div class="para">
+  <div class="para-title">PARA 23 – Wama Liya (وَمَا لِيَ)</div>
+
+  <div class="ayat"><a href="reading/para23-yasin-22-83-p443-446.html">Para 23 • Surah Yasin • Ayat 22–83 • Page 443–446</a></div>
+
+  <div class="surah">
+    <a href="reading/para23-saffat-1-82-p446-449.html">
+      <span class="english-inline">37. Surah As-Saffat</span>
+      <span class="arabic-inline">سورة الصافات</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para23-saffat-1-82-p446-449.html">Para 23 • Surah As-Saffat • Ayat 1–82 • Page 446–449</a></div>
+  <div class="ayat"><a href="reading/para23-saffat-83-172-p450-453.html">Para 23 • Surah As-Saffat • Ayat 83–172 • Page 450–453</a></div>
+
+  <div class="surah">
+    <a href="reading/para23-saad-1-43-p453-456.html">
+      <span class="english-inline">38. Surah Saad</span>
+      <span class="arabic-inline">سورة ص</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para23-saad-1-43-p453-456.html">Para 23 • Surah Saad • Ayat 1–43 • Page 453–456</a></div>
+  <div class="ayat"><a href="reading/para23-saad-44-88-p457-459.html">Para 23 • Surah Saad • Ayat 44–88 • Page 457–459</a></div>
+
+  <div class="surah">
+    <a href="reading/para23-zumar-1-31-p459-462.html">
+      <span class="english-inline">39. Surah Az-Zumar</span>
+      <span class="arabic-inline">سورة الزمر</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para23-zumar-1-31-p459-462.html">Para 23 • Surah Az-Zumar • Ayat 1–31 • Page 459–462</a></div>
+</div>
+<!-- ================= PARA 24 ================= -->
+<div class="para">
+  <div class="para-title">PARA 24 – Faman Azlamu (فَمَنْ أَظْلَمُ)</div>
+
+  <div class="ayat"><a href="reading/para24-zumar-32-56-p463-465.html">Para 24 • Surah Az-Zumar • Ayat 32–56 • Page 463–465</a></div>
+  <div class="ayat"><a href="reading/para24-zumar-57-75-p466-468.html">Para 24 • Surah Az-Zumar • Ayat 57–75 • Page 466–468</a></div>
+
+  <div class="surah">
+    <a href="reading/para24-mumin-1-32-p468-471.html">
+      <span class="english-inline">40. Surah Al-Mu’min</span>
+      <span class="arabic-inline">سورة المؤمن</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para24-mumin-1-32-p468-471.html">Para 24 • Surah Al-Mu’min • Ayat 1–32 • Page 468–471</a></div>
+  <div class="ayat"><a href="reading/para24-mumin-33-58-p472-474.html">Para 24 • Surah Al-Mu’min • Ayat 33–58 • Page 472–474</a></div>
+  <div class="ayat"><a href="reading/para24-mumin-59-85-p475-477.html">Para 24 • Surah Al-Mu’min • Ayat 59–85 • Page 475–477</a></div>
+
+  <div class="surah">
+    <a href="reading/para24-fussilat-1-28-p478-480.html">
+      <span class="english-inline">41. Surah Fussilat</span>
+      <span class="arabic-inline">حم السجدة</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para24-fussilat-1-28-p478-480.html">Para 24 • Surah Fussilat • Ayat 1–28 • Page 478–480</a></div>
+  <div class="ayat"><a href="reading/para24-fussilat-29-46-p481-482.html">Para 24 • Surah Fussilat • Ayat 29–46 • Page 481–482</a></div>
+</div>
+
+<!-- ================= PARA 25 ================= -->
+<div class="para">
+  <div class="para-title">PARA 25 – Ilaihi Yuraddu (إِلَيْهِ يُرَدُّ)</div>
+
+  <div class="ayat"><a href="reading/para25-fussilat-47-54-p483.html">Para 25 • Surah Fussilat • Ayat 47–54 • Page 483</a></div>
+
+  <div class="surah">
+    <a href="reading/para25-shura-1-31-p484-487.html">
+      <span class="english-inline">42. Surah Ash-Shura</span>
+      <span class="arabic-inline">سورة الشورى</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para25-shura-1-31-p484-487.html">Para 25 • Surah Ash-Shura • Ayat 1–31 • Page 484–487</a></div>
+  <div class="ayat"><a href="reading/para25-shura-32-53-p488-490.html">Para 25 • Surah Ash-Shura • Ayat 32–53 • Page 488–490</a></div>
+
+  <div class="surah">
+    <a href="reading/para25-zukhruf-1-49-p490-493.html">
+      <span class="english-inline">43. Surah Az-Zukhruf</span>
+      <span class="arabic-inline">سورة الزخرف</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para25-zukhruf-1-49-p490-493.html">Para 25 • Surah Az-Zukhruf • Ayat 1–49 • Page 490–493</a></div>
+  <div class="ayat"><a href="reading/para25-zukhruf-50-89-p494-496.html">Para 25 • Surah Az-Zukhruf • Ayat 50–89 • Page 494–496</a></div>
+
+  <div class="surah">
+    <a href="reading/para25-dukhan-1-59-p496-499.html">
+      <span class="english-inline">44. Surah Ad-Dukhan</span>
+      <span class="arabic-inline">سورة الدخان</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para25-dukhan-1-59-p496-499.html">Para 25 • Surah Ad-Dukhan • Ayat 1–59 • Page 496–499</a></div>
+
+  <div class="surah">
+    <a href="reading/para25-jathiyah-1-37-p499-502.html">
+      <span class="english-inline">45. Surah Al-Jathiyah</span>
+      <span class="arabic-inline">سورة الجاثية</span>
+    </a>
+  </div>
+
+  <div class="ayat"><a href="reading/para25-jathiyah-1-37-p499-502.html">Para 25 • Surah Al-Jathiyah • Ayat 1–37 • Page 499–502</a></div>
+</div>
+<!-- ================= PARA 26 ================= -->
+<div class="para">
+  <div class="para-title"><strong>PARA 26 – Ha’a Meem (حٰم)</strong></div>
+
+  <div class="surah">
+    <a href="reading/para26-ahqaf-1-35-p503-507.html">
+      <strong>46. Surah Al-Ahqaf</strong> — سورة الأحقاف
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-ahqaf-1-35-p503-507.html">Para 26 • Surah Al-Ahqaf • Ayat 1–35 • Page 503–507</a></div>
+
+  <div class="surah">
+    <a href="reading/para26-muhammad-1-38-p507-511.html">
+      <strong>47. Surah Muhammad</strong> — سورة محمد
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-muhammad-1-38-p507-511.html">Para 26 • Surah Muhammad • Ayat 1–38 • Page 507–511</a></div>
+
+  <div class="surah">
+    <a href="reading/para26-fath-1-29-p512-516.html">
+      <strong>48. Surah Al-Fath</strong> — سورة الفتح
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-fath-1-29-p512-516.html">Para 26 • Surah Al-Fath • Ayat 1–29 • Page 512–516</a></div>
+
+  <div class="surah">
+    <a href="reading/para26-hujurat-1-18-p516-518.html">
+      <strong>49. Surah Al-Hujurat</strong> — سورة الحجرات
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-hujurat-1-18-p516-518.html">Para 26 • Surah Al-Hujurat • Ayat 1–18 • Page 516–518</a></div>
+
+  <div class="surah">
+    <a href="reading/para26-qaaf-1-45-p519-521.html">
+      <strong>50. Surah Qaaf</strong> — سورة ق
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-qaaf-1-45-p519-521.html">Para 26 • Surah Qaaf • Ayat 1–45 • Page 519–521</a></div>
+
+  <div class="surah">
+    <a href="reading/para26-zariyat-1-30-p521-522.html">
+      <strong>51. Surah Az-Zariyat</strong> — سورة الذاريات
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para26-zariyat-1-30-p521-522.html">Para 26 • Surah Az-Zariyat • Ayat 1–30 • Page 521–522</a></div>
+</div>
+
+<!-- ================= PARA 27 ================= -->
+<div class="para">
+  <div class="para-title"><strong>PARA 27 – Qala Fama Khatbukum (قَالَ فَمَا خَطْبُكُمْ)</strong></div>
+
+  <div class="ayat"><a href="reading/para27-zariyat-31-60-p523-524.html">Para 27 • Surah Az-Zariyat • Ayat 31–60 • Page 523–524</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-toor-1-49-p524-526.html">
+      <strong>52. Surah At-Toor</strong> — سورة الطور
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-toor-1-49-p524-526.html">Para 27 • Surah At-Toor • Ayat 1–49 • Page 524–526</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-najm-1-62-p527-529.html">
+      <strong>53. Surah An-Najm</strong> — سورة النجم
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-najm-1-62-p527-529.html">Para 27 • Surah An-Najm • Ayat 1–62 • Page 527–529</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-qamar-1-55-p529-532.html">
+      <strong>54. Surah Al-Qamar</strong> — سورة القمر
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-qamar-1-55-p529-532.html">Para 27 • Surah Al-Qamar • Ayat 1–55 • Page 529–532</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-rahman-1-78-p532-535.html">
+      <strong>55. Surah Ar-Rahman</strong> — سورة الرحمن
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-rahman-1-78-p532-535.html">Para 27 • Surah Ar-Rahman • Ayat 1–78 • Page 532–535</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-waqiah-1-96-p535-538.html">
+      <strong>56. Surah Al-Waqiah</strong> — سورة الواقعة
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-waqiah-1-96-p535-538.html">Para 27 • Surah Al-Waqiah • Ayat 1–96 • Page 535–538</a></div>
+
+  <div class="surah">
+    <a href="reading/para27-hadid-1-29-p538-542.html">
+      <strong>57. Surah Al-Hadeed</strong> — سورة الحديد
+    </a>
+  </div>
+  <div class="ayat"><a href="reading/para27-hadid-1-29-p538-542.html">Para 27 • Surah Al-Hadeed • Ayat 1–29 • Page 538–542</a></div>
+</div>
+<!-- ================= PARA 28 ================= -->
+<div class="para">
+  <div class="para-title"><strong>PARA 28 – Qad Sami Allah (قَدْ سَمِعَ ٱللَّهُ)</strong></div>
+
+  <div class="surah">
+    <a href="reading/para28-mujadila-1-22-p543-546.html">
+      <strong>58. Surah Al-Mujadila</strong> — سورة المجادلة
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-mujadila-1-22-p543-546.html">
+      Para 28 • Surah Al-Mujadila • Ayat 1–22 • Page 543–546
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-hashr-1-24-p546-549.html">
+      <strong>59. Surah Al-Hashr</strong> — سورة الحشر
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-hashr-1-24-p546-549.html">
+      Para 28 • Surah Al-Hashr • Ayat 1–24 • Page 546–549
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-mumtahina-1-13-p550-552.html">
+      <strong>60. Surah Al-Mumtahina</strong> — سورة الممتحنة
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-mumtahina-1-13-p550-552.html">
+      Para 28 • Surah Al-Mumtahina • Ayat 1–13 • Page 550–552
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-saff-1-14-p552-554.html">
+      <strong>61. Surah As-Saff</strong> — سورة الصف
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-saff-1-14-p552-554.html">
+      Para 28 • Surah As-Saff • Ayat 1–14 • Page 552–554
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-jumuah-1-11-p554-555.html">
+      <strong>62. Surah Al-Jumuah</strong> — سورة الجمعة
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-jumuah-1-11-p554-555.html">
+      Para 28 • Surah Al-Jumuah • Ayat 1–11 • Page 554–555
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-munafiqun-1-11-p555-556.html">
+      <strong>63. Surah Al-Munafiqun</strong> — سورة المنافقون
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-munafiqun-1-11-p555-556.html">
+      Para 28 • Surah Al-Munafiqun • Ayat 1–11 • Page 555–556
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-taghabun-1-18-p557-558.html">
+      <strong>64. Surah At-Taghabun</strong> — سورة التغابن
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-taghabun-1-18-p557-558.html">
+      Para 28 • Surah At-Taghabun • Ayat 1–18 • Page 557–558
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-talaq-1-12-p559-560.html">
+      <strong>65. Surah At-Talaq</strong> — سورة الطلاق
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-talaq-1-12-p559-560.html">
+      Para 28 • Surah At-Talaq • Ayat 1–12 • Page 559–560
+    </a
+  </div>
+
+  <div class="surah">
+    <a href="reading/para28-tahrim-1-12-p561-562.html">
+      <strong>66. Surah At-Tahrim</strong> — سورة التحريم
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para28-tahrim-1-12-p561-562.html">
+      Para 28 • Surah At-Tahrim • Ayat 1–12 • Page 561–562
+    </a>
+  </div>
+</div>
+
+<!-- ================= PARA 29 ================= -->
+<div class="para">
+  <div class="para-title"><strong>PARA 29 – Tabarakallazi (تَبَارَكَ ٱلَّذِى)</strong></div>
+
+  <div class="surah">
+    <a href="reading/para29-mulk-1-30-p562-564.html">
+      <strong>67. Surah Al-Mulk</strong> — سورة الملك
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-mulk-1-30-p562-564.html">
+      Para 29 • Surah Al-Mulk • Ayat 1–30 • Page 562–564
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-qalam-1-52-p564-566.html">
+      <strong>68. Surah Al-Qalam</strong> — سورة القلم
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-qalam-1-52-p564-566.html">
+      Para 29 • Surah Al-Qalam • Ayat 1–52 • Page 564–566
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-haqqa-1-52-p566-568.html">
+      <strong>69. Surah Al-Haqqa</strong> — سورة الحاقة
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-haqqa-1-52-p566-568.html">
+      Para 29 • Surah Al-Haqqa • Ayat 1–52 • Page 566–568
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-maarij-1-44-p568-570.html">
+      <strong>70. Surah Al-Ma'arij</strong> — سورة المعارج
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-maarij-1-44-p568-570.html">
+      Para 29 • Surah Al-Ma'arij • Ayat 1–44 • Page 568–570
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-nuh-1-28-p570-571.html">
+      <strong>71. Surah Nuh</strong> — سورة نوح
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-nuh-1-28-p570-571.html">
+      Para 29 • Surah Nuh • Ayat 1–28 • Page 570–571
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-jinn-1-28-p572-573.html">
+      <strong>72. Surah Al-Jinn</strong> — سورة الجن
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-jinn-1-28-p572-573.html">
+      Para 29 • Surah Al-Jinn • Ayat 1–28 • Page 572–573
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-muzzammil-1-20-p574-575.html">
+      <strong>73. Surah Al-Muzzammil</strong> — سورة المزمل
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-muzzammil-1-20-p574-575.html">
+      Para 29 • Surah Al-Muzzammil • Ayat 1–20 • Page 574–575
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-muddathir-1-56-p575-577.html">
+      <strong>74. Surah Al-Muddathir</strong> — سورة المدثر
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-muddathir-1-56-p575-577.html">
+      Para 29 • Surah Al-Muddathir • Ayat 1–56 • Page 575–577
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-qiyamah-1-40-p577-578.html">
+      <strong>75. Surah Al-Qiyamah</strong> — سورة القيامة
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-qiyamah-1-40-p577-578.html">
+      Para 29 • Surah Al-Qiyamah • Ayat 1–40 • Page 577–578
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-insan-1-31-p578-580.html">
+      <strong>76. Surah Al-Insan</strong> — سورة الإنسان
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-insan-1-31-p578-580.html">
+      Para 29 • Surah Al-Insan • Ayat 1–31 • Page 578–580
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para29-mursalat-1-50-p580-582.html">
+      <strong>77. Surah Al-Mursalat</strong> — سورة المرسلات
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para29-mursalat-1-50-p580-582.html">
+      Para 29 • Surah Al-Mursalat • Ayat 1–50 • Page 580–582
+    </a>
+  </div>
+</div>
+
+
+
+
+
+<!-- ================= PARA 30 ================= -->
+<div class="para">
+  <div class="para-title">PARA 30 – Amma (عَمَّ)</div>
+  
+  <div class="surah">
+    <a href="reading/para30-naba-1-40-p587-588.html">
+      <span class="english-inline">78. Surah An-Naba</span>
+      <span class="arabic-inline">سورة النبا</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-naba-1-40-p587-588.html">
+      Para 30 • Surah An-Naba • Ayat 1–40 • Page 587–588
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-naziat-1-46-p588-590.html">
+      <span class="english-inline">79. Surah An-Nazi'at</span>
+      <span class="arabic-inline">سورة النازعات</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-naziat-1-46-p588-590.html">
+      Para 30 • Surah An-Nazi'at • Ayat 1–46 • Page 588–590
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-abasa-1-42-p590-591.html">
+      <span class="english-inline">80. Surah 'Abasa</span>
+      <span class="arabic-inline">سورة عبس</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-abasa-1-42-p590-591.html">
+      Para 30 • Surah 'Abasa • Ayat 1–42 • Page 590–591
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-takwir-1-29-p591-592.html">
+      <span class="english-inline">81. Surah At-Takwir</span>
+      <span class="arabic-inline">سورة التكوير</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-takwir-1-29-p591-592.html">
+      Para 30 • Surah At-Takwir • Ayat 1–29 • Page 591–592
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-infitar-1-19-p592-593.html">
+      <span class="english-inline">82. Surah Al-Infitar</span>
+      <span class="arabic-inline">سورة الإنفطار</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-infitar-1-19-p592-593.html">
+      Para 30 • Surah Al-Infitar • Ayat 1–19 • Page 592–593
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-mutaffifin-1-36-p593-595.html">
+      <span class="english-inline">83. Surah Al-Mutaffifin</span>
+      <span class="arabic-inline">سورة المطففين</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-mutaffifin-1-36-p593-595.html">
+      Para 30 • Surah Al-Mutaffifin • Ayat 1–36 • Page 593–595
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-inshiqaq-1-25-p595-596.html">
+      <span class="english-inline">84. Surah Al-Inshiqaq</span>
+      <span class="arabic-inline">سورة الانشقاق</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-inshiqaq-1-25-p595-596.html">
+      Para 30 • Surah Al-Inshiqaq • Ayat 1–25 • Page 595–596
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-buruj-1-22-p596-597.html">
+      <span class="english-inline">85. Surah Al-Buruj</span>
+      <span class="arabic-inline">سورة البروج</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-buruj-1-22-p596-597.html">
+      Para 30 • Surah Al-Buruj • Ayat 1–22 • Page 596–597
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-tariq-1-17-p597.html">
+      <span class="english-inline">86. Surah At-Tariq</span>
+      <span class="arabic-inline">سورة الطارق</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-tariq-1-17-p597.html">
+      Para 30 • Surah At-Tariq • Ayat 1–17 • Page 597
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-ala-1-19-p598.html">
+      <span class="english-inline">87. Surah Al-A'la</span>
+      <span class="arabic-inline">سورة الأعلى</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-ala-1-19-p598.html">
+      Para 30 • Surah Al-A'la • Ayat 1–19 • Page 598
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-ghashiyah-1-26-p599.html">
+      <span class="english-inline">88. Surah Al-Ghashiyah</span>
+      <span class="arabic-inline">سورة الغاشية</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-ghashiyah-1-26-p599.html">
+      Para 30 • Surah Al-Ghashiyah • Ayat 1–26 • Page 599
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-fajr-1-30-p600.html">
+      <span class="english-inline">89. Surah Al-Fajr</span>
+      <span class="arabic-inline">سورة الفجر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-fajr-1-30-p600.html">
+      Para 30 • Surah Al-Fajr • Ayat 1–30 • Page 600
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-balad-1-20-p601.html">
+      <span class="english-inline">90. Surah Al-Balad</span>
+      <span class="arabic-inline">سورة البلد</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-balad-1-20-p601.html">
+      Para 30 • Surah Al-Balad • Ayat 1–20 • Page 601
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-shams-1-15-p602.html">
+      <span class="english-inline">91. Surah Ash-Shams</span>
+      <span class="arabic-inline">سورة الشمس</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-shams-1-15-p602.html">
+      Para 30 • Surah Ash-Shams • Ayat 1–15 • Page 602
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-lail-1-21-p603.html">
+      <span class="english-inline">92. Surah Al-Lail</span>
+      <span class="arabic-inline">سورة الليل</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-lail-1-21-p603.html">
+      Para 30 • Surah Al-Lail • Ayat 1–21 • Page 603
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-duha-1-11-p603.html">
+      <span class="english-inline">93. Surah Ad-Duha</span>
+      <span class="arabic-inline">سورة الضحى</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-duha-1-11-p603.html">
+      Para 30 • Surah Ad-Duha • Ayat 1–11 • Page 603
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-sharh-1-8-p603.html">
+      <span class="english-inline">94. Surah Ash-Sharh</span>
+      <span class="arabic-inline">سورة الشرح</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-sharh-1-8-p603.html">
+      Para 30 • Surah Ash-Sharh • Ayat 1–8 • Page 603
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-tin-1-8-p604.html">
+      <span class="english-inline">95. Surah At-Tin</span>
+      <span class="arabic-inline">سورة التين</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-tin-1-8-p604.html">
+      Para 30 • Surah At-Tin • Ayat 1–8 • Page 604
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-alaq-1-19-p605.html">
+      <span class="english-inline">96. Surah Al-'Alaq</span>
+      <span class="arabic-inline">سورة العلق</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-alaq-1-19-p605.html">
+      Para 30 • Surah Al-'Alaq • Ayat 1–19 • Page 605
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-qadr-1-5-p605.html">
+      <span class="english-inline">97. Surah Al-Qadr</span>
+      <span class="arabic-inline">سورة القدر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-qadr-1-5-p605.html">
+      Para 30 • Surah Al-Qadr • Ayat 1–5 • Page 605
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-bayyinah-1-8-p606.html">
+      <span class="english-inline">98. Surah Al-Bayyinah</span>
+      <span class="arabic-inline">سورة البينة</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-bayyinah-1-8-p606.html">
+      Para 30 • Surah Al-Bayyinah • Ayat 1–8 • Page 606
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-zilzal-1-8-p606.html">
+      <span class="english-inline">99. Surah Az-Zilzal</span>
+      <span class="arabic-inline">سورة الزلزلة</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-zilzal-1-8-p606.html">
+      Para 30 • Surah Az-Zilzal • Ayat 1–8 • Page 606
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-adiyat-1-11-p607.html">
+      <span class="english-inline">100. Surah Al-'Adiyat</span>
+      <span class="arabic-inline">سورة العاديات</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-adiyat-1-11-p607.html">
+      Para 30 • Surah Al-'Adiyat • Ayat 1–11 • Page 607
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-qariah-1-11-p607.html">
+      <span class="english-inline">101. Surah Al-Qari'ah</span>
+      <span class="arabic-inline">سورة القارعة</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-qariah-1-11-p607.html">
+      Para 30 • Surah Al-Qari'ah • Ayat 1–11 • Page 607
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-takasur-1-8-p607.html">
+      <span class="english-inline">102. Surah At-Takathur</span>
+      <span class="arabic-inline">سورة التكاثر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-takasur-1-8-p607.html">
+      Para 30 • Surah At-Takathur • Ayat 1–8 • Page 607
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-asr-1-3-p608.html">
+      <span class="english-inline">103. Surah Al-'Asr</span>
+      <span class="arabic-inline">سورة العصر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-asr-1-3-p608.html">
+      Para 30 • Surah Al-'Asr • Ayat 1–3 • Page 608
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-humazah-1-9-p608.html">
+      <span class="english-inline">104. Surah Al-Humazah</span>
+      <span class="arabic-inline">سورة الهمزة</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-humazah-1-9-p608.html">
+      Para 30 • Surah Al-Humazah • Ayat 1–9 • Page 608
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-feel-1-5-p608.html">
+      <span class="english-inline">105. Surah Al-Fil</span>
+      <span class="arabic-inline">سورة الفيل</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-feel-1-5-p608.html">
+      Para 30 • Surah Al-Fil • Ayat 1–5 • Page 608
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-quraish-1-4-p609.html">
+      <span class="english-inline">106. Surah Quraish</span>
+      <span class="arabic-inline">سورة قريش</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-quraish-1-4-p609.html">
+      Para 30 • Surah Quraish • Ayat 1–4 • Page 609
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-maun-1-7-p609.html">
+      <span class="english-inline">107. Surah Al-Ma'un</span>
+      <span class="arabic-inline">سورة الماعون</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-maun-1-7-p609.html">
+      Para 30 • Surah Al-Ma'un • Ayat 1–7 • Page 609
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-kauthar-1-3-p609.html">
+      <span class="english-inline">108. Surah Al-Kawthar</span>
+      <span class="arabic-inline">سورة الكوثر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-kauthar-1-3-p609.html">
+      Para 30 • Surah Al-Kawthar • Ayat 1–3 • Page 609
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-kafirun-1-6-p610.html">
+      <span class="english-inline">109. Surah Al-Kafirun</span>
+      <span class="arabic-inline">سورة الكافرون</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-kafirun-1-6-p610.html">
+      Para 30 • Surah Al-Kafirun • Ayat 1–6 • Page 610
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-nasr-1-3-p610.html">
+      <span class="english-inline">110. Surah An-Nasr</span>
+      <span class="arabic-inline">سورة النصر</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-nasr-1-3-p610.html">
+      Para 30 • Surah An-Nasr • Ayat 1–3 • Page 610
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-lahab-1-5-p610.html">
+      <span class="english-inline">111. Surah Al-Lahab (Tabbat)</span>
+      <span class="arabic-inline">سورة المسد</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-lahab-1-5-p610.html">
+      Para 30 • Surah Al-Lahab • Ayat 1–5 • Page 610
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-ikhlas-1-4-p610.html">
+      <span class="english-inline">112. Surah Al-Ikhlas</span>
+      <span class="arabic-inline">سورة الإخلاص</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-ikhlas-1-4-p610.html">
+      Para 30 • Surah Al-Ikhlas • Ayat 1–4 • Page 610
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-falaq-1-5-p611.html">
+      <span class="english-inline">113. Surah Al-Falaq</span>
+      <span class="arabic-inline">سورة الفلق</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-falaq-1-5-p611.html">
+      Para 30 • Surah Al-Falaq • Ayat 1–5 • Page 611
+    </a>
+  </div>
+
+  <div class="surah">
+    <a href="reading/para30-nas-1-6-p611.html">
+      <span class="english-inline">114. Surah An-Nas</span>
+      <span class="arabic-inline">سورة الناس</span>
+    </a>
+  </div>
+  <div class="ayat">
+    <a href="reading/para30-nas-1-6-p611.html">
+      Para 30 • Surah An-Nas • Ayat 1–6 • Page 611
+    </a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
 
 </body>
 </html>
