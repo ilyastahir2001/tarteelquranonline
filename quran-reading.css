@@ -1,1 +1,77 @@
 
+body{
+  margin:0;
+  font-family:Segoe UI, Arial;
+  background:#eef6f2;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  background:#fff;
+  text-align:center;
+}
+.header{
+  background:#0b8457;
+  color:#fff;
+  padding:16px;
+  font-size:24px;
+  font-weight:800;
+}
+
+/* PARA */
+.para{
+  margin:15px;
+  border:1px solid #cfe9dc;
+  border-radius:8px;
+  overflow:hidden;
+}
+.para-title{
+  background:#dff5ea;
+  padding:10px;
+  font-size:18px;
+  font-weight:900;
+  color:#0b8457;
+}
+
+/* SURAH */
+.surah{
+  background:#f7fbf9;
+  padding:8px;
+  border-top:1px solid #e3ece8;
+}
+.surah a{
+  text-decoration:none;
+  font-size:16px;
+  font-weight:800;
+  color:#154360;
+}
+
+/* INLINE SURAH TEXT */
+.arabic-inline{
+  font-size:18px;
+  font-weight:800;
+  color:#0b8457;
+}
+.english-inline{
+  font-size:16px;
+  font-weight:700;
+  color:#154360;
+}
+.dash{
+  margin:0 6px;
+  color:#777;
+  font-weight:bold;
+}
+
+/* AYAT */
+.ayat a{
+  display:block;
+  padding:7px;
+  border-top:1px solid #f0f0f0;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+.ayat a:hover{
+  background:#eafaf1;
+}
